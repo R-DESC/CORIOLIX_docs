@@ -1,0 +1,14 @@
+site_name: COROLIX Docs
+nav:
+    - Home: index.md
+    - How to Access Coriolix: access.md
+    - Cruise Charts: charts.md
+    - Sensor Plots: plots.md
+    - Status: status.md
+    - Sensors: sensors.md
+    - Data: data.md
+    - Documents: documents.md
+    - Cruises: cruises.md
+    - My Account: account.md
+    - Endeavor Deployment: deploy.md
+theme: readthedocs

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Endeavor Deployment - COROLIX Docs</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Endeavor Deployment";
+    var mkdocs_page_input_path = "deploy.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> COROLIX Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../access/">How to Access Coriolix</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../charts/">Cruise Charts</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../plots/">Sensor Plots</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../status/">Status</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../sensors/">Sensors</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../data/">Data</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../documents/">Documents</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../cruises/">Cruises</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../account/">My Account</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Endeavor Deployment</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-background">1 Background</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#physical-equipment-information">Physical Equipment Information</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#account-information">Account Information</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#network-information">Network Information</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-installation-procedures">2 Installation Procedures</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#install-host-arcadia">Install Host: Arcadia</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-startup-shutdown-procedures">3 Startup &amp; Shutdown Procedures</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#startup-host-arcadia">Startup Host: Arcadia</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#startup-vms-1-2-3">Startup VMs: 1, 2, &amp; 3</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#startup-coriolix-services">Startup CORIOLIX services</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#shutdown-coriolix-services">Shutdown CORIOLIX services</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#shutdown-vms-1-2-3">Shutdown VM's: 1, 2, &amp; 3</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#shutdown-host">Shutdown Host</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#coriolix-diagnostic">CORIOLIX Diagnostic</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">COROLIX Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Endeavor Deployment</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="deployment-rv-endeavor-2020">Deployment - <em>R/V Endeavor</em> 2020</h2>
+<p>The information here covers the setup and installation information for the CORIOLIX system installed on the RCRV server Arcadia which was shipped to URI on June 4, 2020 (Update, Arrived June 11th!)</p>
+<p>Tracking information for the UPS shipment may be found here: <a href="http://www.ups.com/WebTracking/processInputRequest?loc=en_US&amp;Requester=NES&amp;tracknum=1Z9839530357681372&amp;AgreeToTermsAndConditions=yes&amp;WT.z_eCTAid=ct1_eml_Tracking__ct1_eml_qvn_eml_5shp&amp;WT.z_edatesent=06042020">1Z9839530357681372</a></p>
+<p>NOTE - Let's just complete everything up to and including section 3 - Startup Host: Arcadia.  After that we should be able to remote in and complete the setup (and run some tests).  thanks, Chris</p>
+<h3 id="1-background">1 Background</h3>
+<h4 id="physical-equipment-information">Physical Equipment Information</h4>
+<ul>
+<li><strong><em>Server Make/Model:</em></strong> Dell PowerEdge R440 1U Server</li>
+<li><strong><em>Server Name:</em></strong> Arcadia</li>
+<li><strong><em>Server OS:</em></strong> CentOS7</li>
+</ul>
+<h4 id="account-information">Account Information</h4>
+<ul>
+<li><strong><em>Local User Account:</em></strong> rcrv</li>
+<li><strong><em>Local User Account Password:</em></strong> Please contact Chris or Jasmine</li>
+</ul>
+<h4 id="network-information">Network Information</h4>
+<p>Three Virtual Machines are run on the arcadia server<br />
+1. endeavor-agg-ship - reads data from the network and writes data to local database<br />
+2. endeavor-pub-ship - holds a copy of the data and services the shipboard web user interface<br />
+3. map-endeavor-ship - a local mapserver to run the mapping/charting tools</p>
+<p>Each machine is presented to the Endeavor shipboard wired network via a bridge on arcadia’s em1 interface.  Therefore, all 4 systems share one wired physical connection (only one network drop is required).  </p>
+<p><strong><em>PHYSICAL SERVER (arcadia):</em></strong>    192.168.2.9<br />
+<strong><em>VM 1 (endeavor-agg-ship):</em></strong> 192.168.2.32<br />
+<strong><em>VM 2 (endeavor-pub-ship):</em></strong> 192.168.2.33<br />
+<strong><em>VM 3 (map-endeavor-ship):</em></strong> 192.168.2.34  </p>
+<h3 id="2-installation-procedures">2 Installation Procedures</h3>
+<p><strong>Overview:</strong>  The following procedure covers physical installation and cabling of the CORIOLIX server: arcadia on R/V Endeavor.</p>
+<h4 id="install-host-arcadia">Install Host: Arcadia</h4>
+<ol>
+<li>Install arcadia in the Main Lab rack location where previously installed.  Secure with makeshift metal "tabs".</li>
+<li>Connect power to both power supplies on the rear of the server.</li>
+<li>Connect a network drop from the 192.168.2.0/24 network to eth1 on the arcadia.</li>
+<li>Optionally, connect a keyboard, mouse, and display</li>
+</ol>
+<h3 id="3-startup-shutdown-procedures">3 Startup &amp; Shutdown Procedures</h3>
+<p><strong>Overview:</strong>
+The following procedure covers starting the CORIOLIX system.  Please note that the host server arcadia is setup such that the CORIOLIX Virtual Machines start automatically.  The CORIOLIX services installed on each Virtual Machine are also set to start automatically.  This means that you only need to work though the first section "Startup Host: Arcadia" and may safely skip the subsequent startup steps.</p>
+<p>Nonetheless, we'll include complete manual Startup procedures here to provide you the options and instructions for starting CORIOLIX VMs or CORIOLIX services manually.  Instructions for manual startup should be performed in sequence as presented.</p>
+<p>For shutdown we currently advise that you follow the manual shutdown instructions under sections "Shutdown CORIOLIX services", "Shutdown VM's: 1, 2, &amp; 3", and "Shutdown Host".  The virtualized system has proven to be robust to controlled shutdowns and restarts of arcadia (where the hypervisor manages the VM shutdowns) - but, we have additional testing to perform before we can be assured that this type of shytdown won't cause issue.</p>
+<h4 id="startup-host-arcadia">Startup Host: Arcadia</h4>
+<ol>
+<li>Press power button on front to start server, allows machine to boot.  </li>
+<li>At CentOS login use the rcrv account  </li>
+<li>Right click on the network connections icon in the upper right of the desktop.  </li>
+<li>Set the em1 interface to be DHCP and check that the Endeavor DHCP server assigns the local <strong>192.168.2.9</strong> address to arcadia.  </li>
+<li>Test dns by pinging google (<strong>ping 8.8.8.8</strong>) or something like that – server needs to see the outside world.  </li>
+<li>If server gets expected IP (<strong>192.168.2.9</strong>) and can ping off-ship then we are good to start VM’s  </li>
+</ol>
+<p><strong><em>Note:</em></strong> After completing the setup above and finishing with arcadia on the Endeavor network at 192.168.2.9 you no longer need to keep a keyboard, mouse, and monitor to work with Arcadia.  You can disconnect those input and display devices.  The remaining setup steps may be performed through an ssh connection to Arcadia</p>
+<h4 id="startup-vms-1-2-3">Startup VMs: 1, 2, &amp; 3</h4>
+<ol>
+<li>From your local machine on the 192.168.2.0/24 network open a terminal window or your ssh client</li>
+<li>
+<p>Make an SSH connection from your local terminal to arcadia:</p>
+<pre><code>&gt;&gt; ssh rcrv@192.168.2.9
+&gt;&gt; password: (enter user rcrv password)
+</code></pre>
+</li>
+<li>
+<p>Change to the root user:</p>
+<pre><code>&gt;&gt; sudo su - root
+&gt;&gt; password: (enter user rcrv password)
+</code></pre>
+</li>
+<li>
+<p>List available virtual machines:</p>
+<pre><code>&gt;&gt; virsh list --all
+</code></pre>
+</li>
+<li>
+<p>Expected List Results (id may vary):</p>
+<pre><code>Id    Name                           State
+----------------------------------------------------
+1     endeavor-agg-ship              stopped
+2     endeavor-map-ship              stopped
+4     endeavor-pub-ship              stopped
+</code></pre>
+</li>
+<li>
+<p>Start each VM from the command line (<em>Note</em>: VM startups usually take less about 60-90 seconds each.):</p>
+<pre><code>&gt;&gt; sudo virsh start endeavor-agg-ship
+&gt;&gt; sudo virsh start endeavor-pub-ship
+&gt;&gt; sudo virsh start endeavor-map-ship
+</code></pre>
+</li>
+<li>
+<p>Expected Startup Results:</p>
+<pre><code>Id    Name                           State
+----------------------------------------------------
+1     endeavor-agg-ship              running
+2     endeavor-map-ship              running
+4     endeavor-pub-ship              running
+</code></pre>
+</li>
+<li>
+<p>Exit your ssh connection to arcadia</p>
+<pre><code>&gt;&gt; exit
+</code></pre>
+</li>
+</ol>
+<h5 id="startup-coriolix-services">Startup CORIOLIX services</h5>
+<p>The following services must be manually started on each virtual machine:</p>
+<table>
+<thead>
+<tr>
+<th>vm: endeavor-agg-ship</th>
+<th>vm: endeavor-pub-ship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>service: sym_service</td>
+<td>service: sym_service</td>
+</tr>
+<tr>
+<td>service: coriolix</td>
+<td>service: coriolix</td>
+</tr>
+<tr>
+<td>service: mqtt</td>
+<td>*</td>
+</tr>
+</tbody>
+</table>
+<p>*There is no mqtt service on endeavor-pub-ship</p>
+<p>To start CORIOLIX follow the workflow below.  You might find it helpful to open two ssh connections, one to each vm.</p>
+<ol>
+<li>
+<p>Start SymmetricDS</p>
+<p>Connect to endeavor-pub-ship via ssh, leave ssh session open after running commands below.</p>
+<pre><code>&gt;&gt; ssh rcrv@192.168.2.33
+&gt;&gt; password: (use rcrv account password)
+&gt;&gt; sudo /opt/SymmetricDS/symmetric-server-3.9.14/bin/sym_service start
+leave ssh session open (for step 2)
+</code></pre>
+<p>Connect to endeavor-agg-ship via ssh, leave ssh session open after running commands below.</p>
+<pre><code>&gt;&gt; ssh rcrv@192.168.2.32
+&gt;&gt; password: (use rcrv account password)
+&gt;&gt; sudo /opt/SymmetricDS/symmetric-server-3.9.14/bin/sym_service start
+leave ssh session open (for step 2)
+</code></pre>
+</li>
+<li>
+<p>Start CORIOLIX Services</p>
+<p>From your open connection to endeavor-pub-ship, execute:</p>
+<pre><code>&gt;&gt; sudo systemctl start coriolix
+&gt;&gt; exit
+</code></pre>
+<p>From your open connection to endeavor-agg-ship, execute:</p>
+<pre><code>&gt;&gt; sudo systemctl start coriolix; sudo systemctl start mqtt
+&gt;&gt; sudo systemctl status coriolix
+&gt;&gt; exit
+</code></pre>
+</li>
+</ol>
+<h5 id="shutdown-coriolix-services">Shutdown CORIOLIX services</h5>
+<p>Shutdown procedures are basically the startup procedures in reverse.</p>
+<ol>
+<li>
+<p>Shutdown CORIOLIX</p>
+<p>Connect to endeavor-agg-ship via ssh, leave ssh session open after running commands below.</p>
+<pre><code>&gt;&gt; ssh rcrv@192.168.2.32
+&gt;&gt; password: (use rcrv account password)
+&gt;&gt; sudo sudo systemctl stop coriolix; sudo systemctl stop mqtt
+leave ssh session open (for step 2)
+</code></pre>
+<p>Connect to endeavor-pub-ship via ssh, leave ssh session open after running commands below.</p>
+<pre><code>&gt;&gt; ssh rcrv@192.168.2.33
+&gt;&gt; password: (use rcrv account password)
+&gt;&gt; sudo systemctl stop coriolix
+leave ssh session open (for step 2)
+</code></pre>
+</li>
+<li>
+<p>Stop SymmetricDS</p>
+<p>From your open connection to endeavor-agg-ship, execute:</p>
+<pre><code>&gt;&gt; sudo /opt/SymmetricDS/symmetric-server-3.9.14/bin/sym_service stop
+&gt;&gt; exit
+</code></pre>
+<p>From your open connection to endeavor-pub-ship, execute:</p>
+<pre><code>&gt;&gt; sudo /opt/SymmetricDS/symmetric-server-3.9.14/bin/sym_service stop
+</code></pre>
+</li>
+</ol>
+<h5 id="shutdown-vms-1-2-3">Shutdown VM's: 1, 2, &amp; 3</h5>
+<p>The VM shutdown process is also essentially the startup process in reverse.</p>
+<ol>
+<li>From your local machine on the 192.168.2.0/24 network open a terminal window or your ssh client</li>
+<li>
+<p>Make an SSH connection from your local terminal to arcadia:</p>
+<pre><code>&gt;&gt; ssh rcrv@192.168.2.9
+&gt;&gt; password: (enter user rcrv password)
+</code></pre>
+</li>
+<li>
+<p>Change to the root user:</p>
+<pre><code>&gt;&gt; sudo su - root
+&gt;&gt; password: (enter user rcrv password)
+</code></pre>
+</li>
+<li>
+<p>List available virtual machines:</p>
+<pre><code>&gt;&gt; virsh list --all
+</code></pre>
+</li>
+<li>
+<p>Expected List Results (id may vary):</p>
+<pre><code>Id    Name                           State
+----------------------------------------------------
+1     endeavor-agg-ship              running
+2     endeavor-map-ship             running
+4     endeavor-pub-ship              running
+</code></pre>
+</li>
+<li>
+<p>Start each VM from the command line (<em>Note</em>: VM startups usually take less about 60-90 seconds each.):</p>
+<pre><code>&gt;&gt; sudo virsh stop endeavor-agg-ship
+&gt;&gt; sudo virsh stop endeavor-pub-ship
+&gt;&gt; sudo virsh stop endeavor-map-ship
+</code></pre>
+</li>
+<li>
+<p>Expected Startup Results:</p>
+<pre><code>Id    Name                           State
+----------------------------------------------------
+1     endeavor-agg-ship              stopped
+2     endeavor-map-ship             stopped
+4     endeavor-pub-ship              stopped
+</code></pre>
+</li>
+<li>
+<p>If you want to shutdown arcadia you can do that now with:</p>
+<pre><code>&gt;&gt; shutdown -h now
+</code></pre>
+</li>
+</ol>
+<p>Otherwise, exit your ssh connection to arcadia to leave arcadia up.</p>
+<pre><code>    &gt;&gt; exit
+</code></pre>
+<h5 id="shutdown-host">Shutdown Host</h5>
+<p>See #8 above</p>
+<h5 id="coriolix-diagnostic">CORIOLIX Diagnostic</h5>
+<ol>
+<li>
+<p>Check datapresence web user interfaces by using your browser.  Open a web browser and navigate to <a href="https://192.168.2.33:8001/status/">https://192.168.2.33:8001/status/</a></p>
+</li>
+<li>
+<p>Expected result: You should see the datapresence user interface status page</p>
+</li>
+<li>
+<p>Check status of UDP data capture:  </p>
+<ol>
+<li>From webpage above, check upper right datetime and location display</li>
+<li>Expected result: Date, Time, and Location (if moving all are updating)</li>
+</ol>
+</li>
+<li>
+<p>Advanced diagnostic &amp; unit tests - <strong>TBD</strong></p>
+</li>
+</ol>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../account/" class="btn btn-neutral" title="My Account"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../account/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
