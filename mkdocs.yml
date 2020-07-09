@@ -1,7 +1,7 @@
-site_name: COROLIX Docs
+site_name: CORIOLIX Docs
 nav:
     - Home: index.md
-    - How to Access Coriolix: access.md
+    - How to Access CORIOLIX: access.md
     - Cruise Charts: charts.md
     - Sensor Plots: plots.md
     - Status: status.md
