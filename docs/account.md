@@ -1,4 +1,5 @@
-# User Accounts
+![](img/UserAccount.png)
+# User Account Page
 
 At present, most of the CORIOLIX web user interface is available for unauthenticated anonymous users.  However, some core functionality is restricted to named local users who must first register for an account, then login to gain access to the restricted content.
 

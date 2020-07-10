@@ -1,6 +1,6 @@
+![](img/CruiseCharts.png)
 # Cruise Charts Page
 The cruise charts page ("Cruise Charts" from the CORIOLIX navigation menu) is a web mapping interface for CORIOLIX.  It presents a dynamic map view of the vessel, its realtime data, and supporting geospatial information such as nearby research infrastructure, routes, and waypoints.  The cruise chart page also has built-in integrations with the Cruise Event Log and Route Planning tools.
-
 ## Basic Map controls:
 Basic map controls include the "out-of-the-box" and ubiquitous *Zoom*, *Pan*, and *Mouse Coordinates* leaflet controls for navigation.
 #### Zoom
