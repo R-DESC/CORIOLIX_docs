@@ -1,7 +1,9 @@
 site_name: CORIOLIX Docs
 nav:
     - Home: index.md
-    - How to Access CORIOLIX: access.md
+    - Getting Started:
+        - How to access CORIOLIX: HT_access.md
+        - How to create an account: HT_account.md
     - CORIOLIX Pages:
         - Cruise Charts: charts.md
         - Sensor Plots: plots.md
@@ -10,8 +12,9 @@ nav:
         - Data: data.md
         - Documents: documents.md
         - Cruises: cruises.md
-        - User Account: account.md
+        - My Account: account.md
     - CORIOLIX Deployments:
-        - Oceanus_Deployment: oceanus_deploy.md
-        - Endeavor Deployment: endeavor_deploy.md
+        - R/V Oceanus: oceanus_deploy.md
+        - R/V Endeavor: endeavor_deploy.md
+        - R/V Point Sur: ptsur_deploy.md
 theme: readthedocs
