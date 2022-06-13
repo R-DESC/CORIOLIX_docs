@@ -19,7 +19,7 @@ nav:
       - Data Model: API_model.md
       - API endpoints: API_endpoints.md
   - CORIOLIX Deployments:
-      - R/V Endeavor: DEPLOYendeavor_.md
+      - R/V Endeavor: DEPLOY_endeavor.md
       - R/V Point Sur: DEPLOY_ptsur.md
       - R/V Sikuliaq: DEPLOY_sikuliaq.md
       - R/V Oceanus: DEPLOY_oceanus.md
