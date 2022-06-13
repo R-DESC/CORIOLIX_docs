@@ -1,20 +1,26 @@
 site_name: CORIOLIX Docs
 nav:
-    - Home: index.md
-    - Getting Started:
-        - How to access CORIOLIX: HT_access.md
-        - How to create an account: HT_account.md
-    - CORIOLIX Pages:
-        - Cruise Charts: charts.md
-        - Sensor Plots: plots.md
-        - Status: status.md
-        - Sensors: sensors.md
-        - Data: data.md
-        - Documents: documents.md
-        - Cruises: cruises.md
-        - My Account: account.md
-    - CORIOLIX Deployments:
-        - R/V Oceanus: oceanus_deploy.md
-        - R/V Endeavor: endeavor_deploy.md
-        - R/V Point Sur: ptsur_deploy.md
+  - Home: index.md
+  - Getting Started:
+      - How to access CORIOLIX: HT_access.md
+      - How to create an account: HT_account.md
+      - How to access underway data: HT_data_access.md
+  - CORIOLIX Pages:
+      - Cruise Charts: PAGES_charts.md
+      - Sensor Plots: PAGES_plots.md
+      - Status: PAGES_status.md
+      - Sensors: PAGES_sensors.md
+      - Data: PAGES_data.md
+      - Documents: PAGES_documents.md
+      - Cruises: PAGES_cruises.md
+      - My Account: PAGES_account.md
+  - CORIOLIX API:
+      - Use Cases: API_use_cases.md
+      - Data Model: API_model.md
+      - API endpoints: API_endpoints.md
+  - CORIOLIX Deployments:
+      - R/V Endeavor: DEPLOYendeavor_.md
+      - R/V Point Sur: DEPLOY_ptsur.md
+      - R/V Sikuliaq: DEPLOY_sikuliaq.md
+      - R/V Oceanus: DEPLOY_oceanus.md
 theme: readthedocs
