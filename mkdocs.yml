@@ -5,6 +5,7 @@ nav:
       - How to access CORIOLIX: HT_access.md
       - How to create an account: HT_account.md
       - How to access underway data: HT_data_access.md
+      - How to onboard sensors: HT_sensor_onboard.md
   - CORIOLIX Pages:
       - Cruise Charts: PAGES_charts.md
       - Sensor Plots: PAGES_plots.md
