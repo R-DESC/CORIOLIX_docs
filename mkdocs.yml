@@ -1,4 +1,5 @@
 site_name: CORIOLIX Docs
+site_url: http://127.0.0.1:8000
 nav:
   - Home: index.md
   - Getting Started:
@@ -23,5 +24,4 @@ nav:
       - R/V Endeavor: DEPLOY_endeavor.md
       - R/V Point Sur: DEPLOY_ptsur.md
       - R/V Sikuliaq: DEPLOY_sikuliaq.md
-      - R/V Oceanus: DEPLOY_oceanus.md
 theme: readthedocs
