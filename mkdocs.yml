@@ -7,21 +7,22 @@ nav:
       - How to create an account: HT_account.md
       - How to access underway data: HT_data_access.md
       - How to onboard sensors: HT_sensor_onboard.md
-  - CORIOLIX Pages:
-      - Cruise Charts: PAGES_charts.md
+  - User Interface Pages:
+      - Cruise Tools: PAGES_tools.md
+      - Cruise Chart: PAGES_charts.md
       - Sensor Plots: PAGES_plots.md
       - Status: PAGES_status.md
       - Sensors: PAGES_sensors.md
       - Data: PAGES_data.md
       - Documents: PAGES_documents.md
-      - Cruises: PAGES_cruises.md
+      - Settings: PAGES_settings.md
       - My Account: PAGES_account.md
-  - CORIOLIX API:
+  - APIs:
       - Use Cases: API_use_cases.md
       - Data Model: API_model.md
       - API endpoints: API_endpoints.md
-  - CORIOLIX Deployments:
-      - R/V Endeavor: DEPLOY_endeavor.md
-      - R/V Point Sur: DEPLOY_ptsur.md
-      - R/V Sikuliaq: DEPLOY_sikuliaq.md
+  - ADMINISTRATION:
+      - Installation: INSTALL_coriolix.md
+      - Upgrade: UPGRADE_coriolix.md
+      - Logs: LOGS_coriolix.md
 theme: readthedocs

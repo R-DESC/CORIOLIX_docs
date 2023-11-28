@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="http://127.0.0.1:8000/HT_data_access/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>How to access underway data - CORIOLIX Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "How to access underway data";
+        var mkdocs_page_input_path = "HT_data_access.md";
+        var mkdocs_page_url = "/HT_data_access/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> CORIOLIX Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../HT_access/">How to access CORIOLIX</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../HT_account/">How to create an account</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">How to access underway data</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#temporal-structure-details">Temporal Structure Details</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#native-unmodified-data">Native Unmodified Data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#high-resolution-date">High Resolution Date</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#binned-data">Binned Data</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#binning-method">Binning Method</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#binning-time-interval">Binning Time Interval</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#date-range">Date Range</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#binned-data-quality">Binned Data Quality</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#all-bins-a">All Bins (a)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#best-bins-b">Best Bins (b)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#samos-bins-c">SAMOS Bins (c)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#binned-quality-flags">Binned Quality Flags</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#binned-data-structure">Binned Data Structure</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../HT_sensor_onboard/">How to onboard sensors</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User Interface Pages</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../PAGES_tools/">Cruise Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PAGES_charts/">Cruise Chart</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PAGES_plots/">Sensor Plots</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PAGES_status/">Status</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PAGES_sensors/">Sensors</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PAGES_data/">Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PAGES_documents/">Documents</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PAGES_settings/">Settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PAGES_account/">My Account</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">APIs</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../API_use_cases/">Use Cases</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../API_model/">Data Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../API_endpoints/">API endpoints</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">ADMINISTRATION</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../INSTALL_coriolix/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../UPGRADE_coriolix/">Upgrade</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../LOGS_coriolix/">Logs</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">CORIOLIX Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Getting Started</li>
+      <li class="breadcrumb-item active">How to access underway data</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="data-access">Data Access</h1>
+<p>CORIOLIX provides access to varied data products (raw, high-resolution, and binned) via multiple modes (data download, API, data services).  Please review the details related to data structure options and access methods described here to identify the best match for your needs.</p>
+<h2 id="temporal-structure-details">Temporal Structure Details</h2>
+<h3 id="native-unmodified-data">Native Unmodified Data</h3>
+<p>All sensor data received by CORIOLIX are archived as ASCII flat files, one file per sensor per day. The unmodified raw messages (strings) are stored at the native resolution collected by the sensor. The format of the strings varies by sensor. Each message string is prepended with the UTC timestamp of receipt. No quality control has been performed on these data.</p>
+<h3 id="high-resolution-date">High Resolution Date</h3>
+<p>For real-time applications, a subset of sensor data are extracted and stored within CORIOLIX. These searchable datasets are available at 1 Hz resolution or below. The collection timestamps and data values are unmodified. Preliminary quality control flags are provided as an additional field. </p>
+<h3 id="binned-data">Binned Data</h3>
+<p>These data are provided in temporal (e.g. one-minute) bins. The mean and accompanying statistics are provided. Preliminary quality flags are included. </p>
+<h4 id="binning-method">Binning Method</h4>
+<p>Data are binned using an (unweighted) mean over a set time interval. Statistics are also captured (std, min, max, num, spotval, median) and made available to the end-user.</p>
+<p>Circular data (such as heading or wind direction) are averaged using circular mean and circular standard deviation calculations. For example, the circular average of 355 and 5 is 0 not 180.</p>
+<p>Vector data (such as true winds) are averaged using vector averaging. First, the components (u,v,w) are each averaged using a simple mean. These mean components are then used to derive the mean direction and mean magnitude:
+mean_direction = rad2deg(atan2(mean_u, mean_v)) + 180
+mean_magnitude = sqrt(mean_u^2 + mean_v^2)</p>
+<h4 id="binning-time-interval">Binning Time Interval</h4>
+<p>All parameters are binned by default to 1-minute bins, centered on "nice" minute timestamps (12:03:00, 12:04:00, etc). On request prior to a cruise, binned data at a second (custom) time interval may also be generated for that cruise. Data collected less frequently than every minute (e.g. ceilometer data are collected every six minutes) are populated with NaNs between data points. The timestamp provided with each bin is the center time of the bin.</p>
+<h4 id="date-range">Date Range</h4>
+<p>Binned data are stored and available only for the past X days. The number of days can be configured from 10 - 365 days (90 days is recommended) on the Data/Access/Archive page.</p>
+<h4 id="binned-data-quality">Binned Data Quality</h4>
+<p>Three binned products are provided: "All", "Best", and "SAMOS". The distinction is the quality of data used to calculate the bin.</p>
+<h4 id="all-bins-a">All Bins (a)</h4>
+<p>The "all" binned product bins all data points within the time interval regardless of quality. Quality flags are ignored.</p>
+<h4 id="best-bins-b">Best Bins (b)</h4>
+<p>Best bins are derived only from data that have flag values of 0, 1, or 2 (i.e. no suspect or failed data). For example, if there are 10 data points within the binning time interval, and one of them has a flag set to "fail", only the remaining 9 data points are used to calculate the bin value.</p>
+<p>Special note: QA/QC happens at various stages throughout the data lifecycle. "Best" bins are regenerated (a) at various stages of the automated QA/QC process, (b) on demand by the sensor technician during the manual QA/QC process, and (c) at the end of the cruise. As a consequence, the "best" binned values may change throughout the cruise. Data earlier in the lifecycle will, by definition, have fewer opportunities for flags to be set to "suspect" or "fail".</p>
+<h4 id="samos-bins-c">SAMOS Bins (c)</h4>
+<p>The third binned product, "SAMOS", uses only a subset of flags to determine whether data should be included in the bin or not. Data must pass only the following four quality tests to be included in the bin:
+(1) Gap Test
+(2) Syntax Test
+(3) Gross Range Test
+(4) Global Range Test
+SAMOS performs further quality assessment on these binned data.</p>
+<h4 id="binned-quality-flags">Binned Quality Flags</h4>
+<p>Quality flags representing the binned data are a composite of all of the flags from that bin. For each flag position, the largest value is used in the composite binned flag.</p>
+<p>For example:
+Individual Data Flags
+111144000022222222111100000000
+121122000033222222114400000000
+Composite Flag
+121144000033222222114400000000</p>
+<p>Special note: QA/QC happens at various stages throughout the data lifecycle. As a consequence, the composite quality flags may change throughout the cruise.</p>
+<h4 id="binned-data-structure">Binned Data Structure</h4>
+<p>A file with a single day of one-minute binned data will contain 1440 rows (60 minutes * 24 hours).</p>
+<p>Each downloaded binned data file contains the following columns:
+Datetime: the center timestamp of the bin
+Latitude: the latitude closest in time to the bin center timestamp (a spot value)
+Longitude: the longitude closest in time to the bin center timestamp (a spot value)
+Parameter Data: a JSON dictionary containing the binned data and statistics
+Multiple parameters may be included in a single file (one column per parameter).</p>
+<p>Binned data and statistics for a given parameter and time bin are stored as a JSON dictionary. An example follows below:</p>
+<p>{ "a": [ 359.017, 5.259, 0.1, 359.9, 120, 359.5, -999 ], "b": [ 358.982, 5.321, 1, 359.9, 117, 359.5, -999 ], "c": [ 358.982, 5.321, 1, 359.9, 117, 359.5, -999 ], "fa": "224122222222222222222222222222", "fb": "221122222222222222222222222222", "fc": "221122222222222222222222222222", "sa": "2021-05-06 22:12:59Z", "sb": "2021-05-06 22:12:59Z", "sc": "2021-05-06 22:12:59Z" }</p>
+<p>where:
+"a": all array (mean, std, min, max, num, spot, median)
+"b": best array (mean, std, min, max, num, spot, median)
+"c": samos array (mean, std, min, max, num, spot, median)
+"fa": all flag (combination of flags from the data used to derive the "all" bins)
+"fb": best flags (combination of flags from the data used to derive the "best" bin)
+"fc": samos flag (combination of flags from the data used to derive the "samos" bin)
+"sa": spot datetime (all)
+"sb": spot datetime (best)
+"sc": spot datetime (samos)</p>
+<p>Spot values are unmodified data values that were collected closest in time to the center time of the bin.</p>
+<h1 id="modes-of-data-access">Modes of Data Access</h1>
+<p>CORIOLIX supports varied modes of data access, described briefly here. </p>
+<h2 id="file-downloadfile-share">File (download/file share)</h2>
+<table>
+<thead>
+<tr>
+<th>data structure:</th>
+<th>native only</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>temporal resolution</strong></td>
+<td><strong>exactly once per day</strong></td>
+</tr>
+<tr>
+<td><strong>data formats:</strong></td>
+<td><strong>.csv</strong></td>
+</tr>
+<tr>
+<td><strong>exchange protocols:</strong></td>
+<td><strong>smb &amp; nfs (read only) file share</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="coriolix-rest-api-polling">CORIOLIX REST API (polling)</h2>
+<table>
+<thead>
+<tr>
+<th>data structures:</th>
+<th>native, high resolution, binned</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>temporal resolution</strong></td>
+<td><strong>any window of time</strong></td>
+</tr>
+<tr>
+<td><strong>data formats:</strong></td>
+<td><strong>.json, .geojson</strong></td>
+</tr>
+<tr>
+<td><strong>exchange protocol:</strong></td>
+<td><strong>https</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="erddap-api-polling">ERDDAP API (polling)</h2>
+<table>
+<thead>
+<tr>
+<th>data structures:</th>
+<th>native, high resolution, binned</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>temporal resolution</strong></td>
+<td><strong>any window of time</strong></td>
+</tr>
+<tr>
+<td><strong>data formats:</strong></td>
+<td><strong>.csv, .tsv, .mat, .nc</strong></td>
+</tr>
+<tr>
+<td><strong>exchange protocol:</strong></td>
+<td><strong>https</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="data-services-pushing">Data Services (pushing)</h2>
+<table>
+<thead>
+<tr>
+<th>data structures:</th>
+<th>real-time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>temporal resolution</strong></td>
+<td><strong>near real-time only</strong></td>
+</tr>
+<tr>
+<td><strong>data format:</strong></td>
+<td><strong>native sensor messages</strong></td>
+</tr>
+<tr>
+<td><strong>exchange protocols:</strong></td>
+<td><strong>udp, mqtt</strong></td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../HT_account/" class="btn btn-neutral float-left" title="How to create an account"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../HT_sensor_onboard/" class="btn btn-neutral float-right" title="How to onboard sensors">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../HT_account/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../HT_sensor_onboard/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

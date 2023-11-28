@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="http://127.0.0.1:8000/PAGES_charts/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Cruise Chart - CORIOLIX Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Cruise Chart";
+        var mkdocs_page_input_path = "PAGES_charts.md";
+        var mkdocs_page_url = "/PAGES_charts/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> CORIOLIX Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../HT_access/">How to access CORIOLIX</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../HT_account/">How to create an account</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../HT_data_access/">How to access underway data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../HT_sensor_onboard/">How to onboard sensors</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User Interface Pages</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../PAGES_tools/">Cruise Tools</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Cruise Chart</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#basic-map-controls">Basic Map controls:</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#zoom">Zoom</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pan">Pan</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mouse-coordinates">Mouse Coordinates</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#menu-bar-controls">Menu Bar controls:</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#layer-control">Layer Control</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#background-layers">Background Layers:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#raster-overlays">Raster Overlays</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#ship-track-data">Ship Track Data</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#underway-science-data">Underway Science Data</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#custom-routing">Custom Routing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#events">Events</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#re-center-map">Re-Center Map</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#settings">Settings</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PAGES_plots/">Sensor Plots</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PAGES_status/">Status</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PAGES_sensors/">Sensors</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PAGES_data/">Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PAGES_documents/">Documents</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PAGES_settings/">Settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PAGES_account/">My Account</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">APIs</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../API_use_cases/">Use Cases</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../API_model/">Data Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../API_endpoints/">API endpoints</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">ADMINISTRATION</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../INSTALL_coriolix/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../UPGRADE_coriolix/">Upgrade</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../LOGS_coriolix/">Logs</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">CORIOLIX Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">User Interface Pages</li>
+      <li class="breadcrumb-item active">Cruise Chart</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p><img alt="" src="../img/banner_cruise_chart.png" /></p>
+<h1 id="cruise-charts-page">Cruise Charts Page</h1>
+<p>The cruise charts page ("Cruise Charts" from the CORIOLIX navigation menu) is a web mapping interface for CORIOLIX.  It presents a dynamic map view of the vessel, its realtime data, and supporting geospatial information such as nearby research infrastructure, routes, and waypoints.  The cruise chart page also has built-in integrations with the Cruise Event Log and Route Planning tools.</p>
+<h2 id="basic-map-controls">Basic Map controls:</h2>
+<p>Basic map controls include the "out-of-the-box" and ubiquitous <em>Zoom</em>, <em>Pan</em>, and <em>Mouse Coordinates</em> leaflet controls for navigation.</p>
+<h4 id="zoom">Zoom</h4>
+<p>Located in the upper lefthand corner of the map pane.  Click + to zoom in, click - to zoom out.<br />
+<img alt="" src="../img/chart_zoomscale.png" /></p>
+<h4 id="pan">Pan</h4>
+<p>Left click, hold and drag on the map to pan (note: no graphic of this operation).</p>
+<h4 id="mouse-coordinates">Mouse Coordinates</h4>
+<p>Located in the lower righthand corner of the map pane.  Provides coordinate readout (decimal degrees) for mouse pointer location.<br />
+<img alt="" src="../img/chart_mousecoords.png" /></p>
+<h2 id="menu-bar-controls">Menu Bar controls:</h2>
+<p>Menu Bar controls are custom controls to the CORIOLIX charting interface.  You may expand any of the controls by selecting its icon from the thin Menu Bar ribbon along the righthand side of the map pane.</p>
+<h4 id="layer-control">Layer Control</h4>
+<p>Located in at the top of the Menu Bar, the Layer Control provides a interface for toggling layer visibility on the map.
+<img alt="" src="../img/chart_layer_control.png" /></p>
+<h5 id="background-layers">Background Layers:</h5>
+<p>Background layers are externally sourced, locally cached, map services that provide geographic 'background' context to the charting interface.  One and only one background layer is always active, but we've selected three background layers to choose from.  You may add additional layers by request or by editing the map configuration file.</p>
+<ul>
+<li>
+<p>Open Streetmap
+<img alt="" src="../img/chart_layer_openstrtmap.png" /></p>
+</li>
+<li>
+<p>Global Multi-Resolution Topography Synthesis (https://www.gmrt.org/)
+<img alt="" src="../img/chart_layer_gmrt.png" /></p>
+</li>
+<li>
+<p>NOAA Electronic Nautical Charts (NOAA ENCs)
+<img alt="" src="../img/chart_layer_enc.png" /></p>
+</li>
+</ul>
+<h5 id="raster-overlays">Raster Overlays</h5>
+<p>Raster overlays are similar to background layers.  They are also externally sourced, locally cached, map services that provide local context to the charting interface.  However, raster layers are off (inactive) by default.  When activated (selected) they plot on top of the background layers.  We've provided two default raster layers.  Currently the latest image is provided by default and there is no user control for vieweing past (out of date) imagery.</p>
+<ul>
+<li>8-Day Composite Global SST </li>
+<li>8-Day Composite Global Chl-a conentration</li>
+</ul>
+<h5 id="ship-track-data">Ship Track Data</h5>
+<p>This grouping presents the ship navigation in trackpoint (navigation fixes) or trackline (navigation path) format.  Note that trackpoints are clickable and will open a pop-up with Heading, COG, and SOG data relevant to the trackpoint of interest.</p>
+<h5 id="underway-science-data">Underway Science Data</h5>
+<p>This grouping includes trackpoint overlays organized into two instrument class groups, Flowthrough and Met. &amp; Atmospheric.  All points are clickable - to show relevant sensor data observations at that point, and may be colorized by unique instrument parameter via the settings tools.</p>
+<h4 id="custom-routing">Custom Routing</h4>
+<p>Located just below the Layer Control in the Menu Bar, the Custom Routing controls provide a user interface for creating new routes (routes are defined here as simple line or polyline shapes stored as geoJSON in the CORIOLIX database).<br />
+<img alt="" src="../img/chart_routing.png" />
+Users may draw a route on the map, calculate route distance, and also the time required to complete route under various transit speeds.
+<img alt="" src="../img/chart_routing_ex.png" /></p>
+<h4 id="events">Events</h4>
+<p>All cruise events are available for visualization in the charting interface.  The Events control, immediately below the Custom Routing control, provides the user a mechanism to toggle event visibility.  Place a check next to any event that you would like to make visible in the map view.
+<img alt="" src="../img/chart_events_ex.png" /></p>
+<h4 id="re-center-map">Re-Center Map</h4>
+<p>Click the "crosshairs" icon at the bottom of the menu bar to reposition the map view to have the vessel in the center of the view.<br />
+<img alt="" src="../img/chart_crosshairs.png" /></p>
+<h4 id="settings">Settings</h4>
+<p>Use the chart settings sidebar to modify the default behavior or setup of the map.  Chart settings will be saved to your browser cache and will persist across sessions.  Your settings will be lost if/when you clear your cache.</p>
+<p>The first group of settings control how the Underway Science Data trackpoints will be rendered.  Use the dropdown menus to select an instrument and color scheme.  When available, we use the local range for the parameter of interest to set the color bounds.  If the local range is not available, we use the global range.  If no global range is available then the user will need to manually set the color minimum and maximum.</p>
+<p>We've made the display of the ship, the true winds wind barbs, and the dead reckoning overlays optional for users.  You may use the setting page to toggle overlay icon visibility for these items as well as set a default cruise track display interval (default = 600 minutes or 10 hours).</p>
+<p><img alt="" src="../img/chart_settings.png" /></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../PAGES_tools/" class="btn btn-neutral float-left" title="Cruise Tools"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../PAGES_plots/" class="btn btn-neutral float-right" title="Sensor Plots">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../PAGES_tools/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../PAGES_plots/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

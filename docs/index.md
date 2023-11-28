@@ -1,5 +1,5 @@
 # CORIOLIX Documentation
-CORIOLIX Version X.Y.Z (will officially mark at Sikuliaq 2023 update)
+CORIOLIX Version 1.2.1 (November 2023)
 
 ## Background
 
@@ -20,7 +20,9 @@ CORIOLIX was designed to unlock the vessel data and provide shoreside access in 
 * Quality Assurance
 
 ## Project Status
+The first public release for CORIOLIX is planned to coincide with delivery of the RCRV Taani (July 2024).  Currently, CORIOLIX is only available to select users who are actively assisting with its development.
 
-## Future Plans
-
-## CORIOLIX on Github 
+## CORIOLIX on Github
+https://github.com/R-DESC/CORIOLIX_app
+https://github.com/R-DESC/CORIOLIX_install
+https://github.com/R-DESC/CORIOLIX_docs

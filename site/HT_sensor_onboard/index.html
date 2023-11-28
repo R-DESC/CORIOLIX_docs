@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="http://127.0.0.1:8000/HT_sensor_onboard/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>How to onboard sensors - CORIOLIX Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "How to onboard sensors";
+        var mkdocs_page_input_path = "HT_sensor_onboard.md";
+        var mkdocs_page_url = "/HT_sensor_onboard/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> CORIOLIX Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../HT_access/">How to access CORIOLIX</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../HT_account/">How to create an account</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../HT_data_access/">How to access underway data</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">How to onboard sensors</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#step-1-create-a-new-sensor-in-coriolix">Step 1. Create a new sensor in CORIOLIX</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#sensor-overview">Sensor Overview</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#native-data-feed">Native Data Feed</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#native-data-format">Native Data Format</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-processing-script">Data Processing Script</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#operating-limits">Operating Limits</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ownership-information">Ownership Information</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#current-physical-status">Current Physical Status</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#vessel-installation-location">Vessel Installation Location</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-rates">Data Rates</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-storage-access">Data Storage &amp; Access</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#time-source">Time Source</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#calibration-and-maintenance">Calibration and Maintenance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#submit-initial-sensor-configuration">Submit Initial Sensor Configuration</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-2-configure-sensor-parameters">Step 2. Configure Sensor Parameters</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#parameter-overview">Parameter Overview</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#standard-name-units">Standard Name &amp; Units</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#data-value-specifications">Data Value Specifications</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#database-storage">Database Storage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#online-display">Online Display</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-3-create-an-openrvdas-sensor-to-network-logger">Step 3. Create an OpenRVDAS sensor to network logger</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#step-4-create-an-openrvdas-data-logger">Step 4. Create an OpenRVDAS data logger</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User Interface Pages</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../PAGES_tools/">Cruise Tools</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PAGES_charts/">Cruise Chart</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PAGES_plots/">Sensor Plots</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PAGES_status/">Status</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PAGES_sensors/">Sensors</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PAGES_data/">Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PAGES_documents/">Documents</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PAGES_settings/">Settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../PAGES_account/">My Account</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">APIs</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../API_use_cases/">Use Cases</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../API_model/">Data Model</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../API_endpoints/">API endpoints</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">ADMINISTRATION</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../INSTALL_coriolix/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../UPGRADE_coriolix/">Upgrade</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../LOGS_coriolix/">Logs</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">CORIOLIX Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Getting Started</li>
+      <li class="breadcrumb-item active">How to onboard sensors</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="onboarding-a-new-instrument-to-coriolix">Onboarding a new instrument to CORIOLIX:</h1>
+<p>This guide provides an overview of the steps required to incorporate a new sensor
+into CORIOLIX.</p>
+<p>"Incorporate into CORIOLIX" is meant to encompass any actions needed to connect and communicate with sensor, configure a data logger for the sensor, and access the sensor and its data through CORIOLIX.</p>
+<p>This guide assumes that the new sensor has been deployed on the vessel and that the sensor is operational and configured to output RS-232 serial data.</p>
+<h4 id="step-1-create-a-new-sensor-in-coriolix">Step 1. Create a new sensor in CORIOLIX</h4>
+<p>Logging data to CORIOLIX first requires the creation of a sensor record in the CORIOLIX database.  Because CORIOLIX manages all phases of the data lifecycle, and not simply logging, it requires us to specify a diverse and comprehensive set of metadata up front.  While all metadata fields are not strictly required, best practice is to maintain all fields.</p>
+<p><img alt="" src="../img/HT_Onboard_1.png" /></p>
+<p>First, ensure that you are logged in and viewing the Sensor Details &amp; Logs Page. This is where all
+new sensor records are created.  Choose the "Add New" option at the top left corner of the Sensor Details and Logs table.  This will load the New sensor setup form.</p>
+<h5 id="sensor-overview">Sensor Overview</h5>
+<p><img alt="" src="../img/HT_Onboard_2.png" /></p>
+<ul>
+<li><strong><em>Sensor ID</em></strong> - 6 digit alphanumeric identifier + last 6 digits of serial number</li>
+<li><strong><em>Sensor Name</em></strong> - Name provided by the manufacturer</li>
+<li><strong><em>Class</em></strong> - Generic classification used in CORIOLIX for grouping plots and displays</li>
+<li><strong><em>Type</em></strong> - Controlled NURC vocabulary options</li>
+<li><strong><em>Vendor</em></strong> - Controlled NURC vocabulary options</li>
+<li><strong><em>Serial Number</em></strong> - as marked on the instrument</li>
+<li><strong><em>Description</em></strong> - Free text</li>
+</ul>
+<h5 id="native-data-feed">Native Data Feed</h5>
+<p><img alt="" src="../img/HT_Onboard_3.png" /></p>
+<ul>
+<li><strong><em>Signal Type</em></strong> - Analog, Digital, or Derived (NOTE: only use Derived for synthetic sensors such as True Winds or similar)</li>
+<li><strong><em>Comm Type</em></strong> - Choose the analog carrier or the digital transmission protocol</li>
+<li><strong><em>Serial Details</em></strong> - Leave empty for non-serial instruments</li>
+<li><strong><em>Ethernet Details</em></strong> - Leave empty for non-ethernet enabled instruments</li>
+<li><strong><em>Native File Details</em></strong> - Complete only if the sensor data must be read from a file.</li>
+</ul>
+<h5 id="native-data-format">Native Data Format</h5>
+<p><img alt="" src="../img/HT_Onboard_4.png" /></p>
+<ul>
+<li><strong><em>Native Data Description</em></strong> - Free text</li>
+<li><strong><em>Native Data Type</em></strong> - For digital data types, is the data encoded as text or binary?</li>
+</ul>
+<p><img alt="" src="../img/HT_Onboard_5.png" /></p>
+<ul>
+<li><strong><em>Sample Data Message(s)</em></strong> - Capture one or more messages from the instrument and add them here for use in developing the Message Format String parsing expression.</li>
+</ul>
+<p><img alt="" src="../img/HT_Onboard_6.png" /></p>
+<ul>
+<li><strong><em>Message Format String</em></strong> - A regular expression for parsing messages to named variables.  </li>
+</ul>
+<p>Using our 3D anemometer example message of "B, -000.08, +000.03, +000.01, M, +344.17, +020.92, 00, 3A"</p>
+<p>We want/need to parse out the following 6 values from the message and assign them names:</p>
+<ul>
+<li>unit_id = B</li>
+<li>U_speed = -000.08</li>
+<li>V_speed = 000.03</li>
+<li>W_speed = 000.01</li>
+<li>SOS = 344.17</li>
+<li>Sonic_temp = 20.92</li>
+<li>Status = 00</li>
+<li>checksum = 3A</li>
+</ul>
+<p>To build a regex parser, first remember to enclose everything in ['']</p>
+<ul>
+<li>Next add a start of line character, ^, to make: ['^']</li>
+<li>Next add in one open and closed parentheses pair, comma separated, for each value to parse to make: ['^(),(),(),(),(),()']</li>
+<li>Add in any characters for unused message parts to make: ['^(),(),(),(),M,(),()']</li>
+<li>Finally write the unique parse and name assignment regex for each variable and insert into the appropriate positional parenthetical.</li>
+<li>Use the (?<variable_name>regex) format to match patterns and assign names.  </li>
+<li>To parse the letter "B" and assign it to the variable "unit_id" requires this parse string (?P<unit_id>\w+).</li>
+</ul>
+<p>Our Message Format String is now: ['^(?P<unit_id>\w+),(),(),(),(),()']</p>
+<ul>
+<li>Continue to build your parse string.  </li>
+<li>Use the Verify Format button to test your parser.</li>
+</ul>
+<h5 id="data-processing-script">Data Processing Script</h5>
+<p>The data processing script name identifies which pre-written data transformation module to use.  If the message data needs no calibration or transformation, set this value to: NoTransformation</p>
+<p><img alt="" src="../img/HT_Onboard_7.png" /></p>
+<h5 id="operating-limits">Operating Limits</h5>
+<p>Complete as many of the equipment operating limit information as possible.  This information can be used for QA/QC purposes.</p>
+<p><img alt="" src="../img/HT_Onboard_8.png" /></p>
+<h5 id="ownership-information">Ownership Information</h5>
+<p><img alt="" src="../img/HT_Onboard_9.png" /></p>
+<h5 id="current-physical-status">Current Physical Status</h5>
+<p><img alt="" src="../img/HT_Onboard_10.png" /></p>
+<h5 id="vessel-installation-location">Vessel Installation Location</h5>
+<p><img alt="" src="../img/HT_Onboard_11.png" /></p>
+<h5 id="data-rates">Data Rates</h5>
+<p><img alt="" src="../img/HT_Onboard_12.png" /></p>
+<h5 id="data-storage-access">Data Storage &amp; Access</h5>
+<p><img alt="" src="../img/HT_Onboard_13.png" /></p>
+<h5 id="time-source">Time Source</h5>
+<p><img alt="" src="../img/HT_Onboard_14.png" /></p>
+<h5 id="calibration-and-maintenance">Calibration and Maintenance</h5>
+<p><img alt="" src="../img/HT_Onboard_15.png" /></p>
+<h5 id="submit-initial-sensor-configuration">Submit Initial Sensor Configuration</h5>
+<p><img alt="" src="../img/HT_Onboard_16.png" /></p>
+<h4 id="step-2-configure-sensor-parameters">Step 2. Configure Sensor Parameters</h4>
+<p>Only after saving the new sensor, and thus creating a CORIOLIX database record for the instrument, can parameters be added.  Open the sensor edit form again and find the parameters section.</p>
+<p><img alt="" src="../img/HT_Onboard_17.png" /></p>
+<h5 id="parameter-overview">Parameter Overview</h5>
+<p><img alt="" src="../img/HT_Onboard_18.png" /></p>
+<ul>
+<li><strong><em>Parameter Long Name</em></strong> - Free text, should be selected from local standard vocabulary</li>
+<li><strong><em>Parameter Short Name</em></strong> - Free text, should be selected from local standard vocabulary</li>
+<li><strong><em>Parameter Description</em></strong> - Free text,</li>
+<li><strong><em>SAMOS Data Category</em></strong> -</li>
+<li><strong><em>Processing Status</em></strong> -</li>
+<li><strong><em>Processing Symbol</em></strong> - The name or symbol used by the calibration/transformation module to reference this parameter.  Leave blank for sensors implementing NoTransformation.  NOTE: consult the cal/trans module documentation to select the appropriate processing symbol.</li>
+<li><strong><em>Diagnostic Parameter</em></strong> -</li>
+<li><strong><em>Internal ID</em></strong> - a unique identifier auto generated by CORIOLIX</li>
+</ul>
+<h5 id="standard-name-units">Standard Name &amp; Units</h5>
+<h5 id="data-value-specifications">Data Value Specifications</h5>
+<h5 id="database-storage">Database Storage</h5>
+<h5 id="online-display">Online Display</h5>
+<h4 id="step-3-create-an-openrvdas-sensor-to-network-logger">Step 3. Create an OpenRVDAS sensor to network logger</h4>
+<ul>
+<li>
+<p>SSH to the OpenRVDAS peripheral system that you've already connected your RS-232 instrument to.</p>
+</li>
+<li>
+<p>Run the "create_cruise_configuration" script with the wire2net flag set.</p>
+</li>
+<li>
+<p>Restart logging on the peripheral OpenRVDAS system</p>
+</li>
+</ul>
+<h4 id="step-4-create-an-openrvdas-data-logger">Step 4. Create an OpenRVDAS data logger</h4>
+<ul>
+<li>
+<p>SSH to the central OpenRVDAS system</p>
+</li>
+<li>
+<p>Run the "create_cruise_configuration" script with the net2db flag set.</p>
+</li>
+<li>
+<p>Restart logging on the peripheral OpenRVDAS system</p>
+</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../HT_data_access/" class="btn btn-neutral float-left" title="How to access underway data"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../PAGES_tools/" class="btn btn-neutral float-right" title="Cruise Tools">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../HT_data_access/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../PAGES_tools/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

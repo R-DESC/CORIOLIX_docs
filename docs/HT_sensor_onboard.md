@@ -163,7 +163,3 @@ Only after saving the new sensor, and thus creating a CORIOLIX database record f
 - Run the "create_cruise_configuration" script with the net2db flag set.
 
 - Restart logging on the peripheral OpenRVDAS system
-
-#### Step 5. R.D.W.H.A.H.B.
-
-![](img/charlie.jpg)

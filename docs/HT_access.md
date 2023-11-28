@@ -1,8 +1,14 @@
 # Accessing the CORIOLIX user interface(s):
 
-Please note that currently, Spring 2022, we maintain two public facing CORIOLIX websites, one for Endeavor and the other for Point Sur.
+Please note that currently, Fall 2023, there are three  public facing CORIOLIX shoreside websites:
 
-Please also note that the shipboard interface to CORIOLIX (CORIOLIX website) is only available locally on your shipboard LAN (by design it can't be accessed by users from shore). In contrast, the shoreside CORIOLIX user interface may be accessed from ship or from shore. When on ship, use the ship's CORIOLIX interface for best performance.
+* RV Endeavor
+* RV Point Sur
+* RV Sikuliaq
+
+Please also note that the shipboard interface to CORIOLIX (website) is only available locally on your shipboard LAN (by design it can't be accessed by users from shore). 
+
+In contrast, the shoreside CORIOLIX user interface may be accessed from ship or from shore. When on ship, use the ship's interface for best performance.
 
 ## CORIOLIX on Endeavor:
 
