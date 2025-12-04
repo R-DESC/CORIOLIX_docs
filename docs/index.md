@@ -4,10 +4,24 @@
 
 ## Overview
 
-CORIOLIX (**C**ruise **O**bservation **R**eal-Time **I**nterface for **L**ive **I**nformation **E**xchange) is a comprehensive real-time oceanographic data acquisition and processing system developed for research vessels in the US Academic Research Fleet (ARF).
+CORIOLIX (**C**ruise **O**bservation **R**eal-Time **I**nterface for **L**ive **I**nformation **E**xchange) is a comprehensive real-time oceanographic data acquisition and processing system developed for research vessels.
 
 !!! info "Current Status"
-    CORIOLIX is actively deployed on Regional Class Research Vessels (RCRVs) and continues to expand its capabilities for the oceanographic research community.
+    CORIOLIX is actively deployed in the National Oceanic and Atmospheric Administration (NOAA) & US Academic Research Fleet (ARF).
+
+    **ARF Vessels (Operating Institution):**
+    
+    - R/V Sikuliaq (University of Alaska)
+    - R/V Point Sur (Univeristy of Southern Mississippi)
+    - R/V Pelican (Louisiana Universities Marine Consortium)
+    - R/V Savannah (Univeristy of Georgia)
+    - R/V Roger Revelle (Scripps Institute of Oceanography)
+
+    **NOAA Vessels:**
+    
+    - Okeanos Explorer
+    - Gordon Gunter
+    - Bell H. Shimada
 
 ## Background
 

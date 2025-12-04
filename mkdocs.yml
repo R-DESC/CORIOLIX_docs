@@ -78,8 +78,7 @@ nav:
           - Troubleshooting: HT_sensor_onboard_troubleshooting.md
           - Special Topics:
               - RegEx Guide: RegExGuide.md
-  - User Interface:
-      - Overview: PAGES_tools.md
+  - User Guide:
       - Charts & Visualization: PAGES_charts.md
       - Sensor Plots: PAGES_plots.md
       - System Status: PAGES_status.md
@@ -88,7 +87,9 @@ nav:
       - Document Library: PAGES_documents.md
       - Settings: PAGES_settings.md
       - Account Management: PAGES_account.md
+      - Cruise Tools: PAGES_tools.md
   - API Reference:
+      - Getting Started: API_getting_started.md
       - Use Cases: API_use_cases.md
       - Data Model: API_model.md
       - Endpoints: API_endpoints.md

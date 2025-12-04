@@ -28,6 +28,7 @@ The sensor onboarding process consists of four main steps:
 Create a comprehensive sensor record in the CORIOLIX database with all required metadata and configuration details.
 
 **Key Activities:**
+
 - Define sensor overview and identification
 - Configure native data feed settings
 - Set up data format and parsing rules
@@ -39,6 +40,7 @@ Create a comprehensive sensor record in the CORIOLIX database with all required 
 Define and configure individual sensor parameters for data processing and display.
 
 **Key Activities:**
+
 - Set parameter names and descriptions
 - Define units and data specifications
 - Configure database storage options
@@ -49,6 +51,7 @@ Define and configure individual sensor parameters for data processing and displa
 Create and configure the OpenRVDAS sensor-to-network logger for data transmission.
 
 **Key Activities:**
+
 - SSH to peripheral OpenRVDAS system
 - Configure cruise configuration with wire2net settings
 - Restart logging services
@@ -58,6 +61,7 @@ Create and configure the OpenRVDAS sensor-to-network logger for data transmissio
 Establish the central data logger for processing and storing sensor data.
 
 **Key Activities:**
+
 - SSH to central OpenRVDAS system
 - Configure cruise configuration with net2db settings
 - Restart logging services
