@@ -1,28 +1,105 @@
-site_name: CORIOLIX Docs
-site_url: http://127.0.0.1:8000
+site_name: CORIOLIX Documentation
+site_description: Real-time oceanographic data acquisition and processing system for research vessels
+site_author: R-DESC
+site_url: https://r-desc.github.io/CORIOLIX_docs/
+
+repo_name: R-DESC/CORIOLIX_docs
+repo_url: https://github.com/R-DESC/CORIOLIX_docs
+edit_uri: edit/master/docs/
+
+theme:
+  name: material
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.action.edit
+    - content.action.view
+  icon:
+    repo: fontawesome/brands/github
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+plugins:
+  - search:
+      lang: en
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: date
+
 nav:
   - Home: index.md
   - Getting Started:
-      - How to access CORIOLIX: HT_access.md
-      - How to create an account: HT_account.md
-      - How to access underway data: HT_data_access.md
-      - How to onboard sensors: HT_sensor_onboard.md
-  - User Interface Pages:
-      - Cruise Tools: PAGES_tools.md
-      - Cruise Chart: PAGES_charts.md
+      - System Access: HT_access.md
+      - Account Creation: HT_account.md
+      - Data Access: HT_data_access.md
+      - Sensor Onboarding:
+          - Overview: HT_sensor_onboard.md
+          - Step 1 - Create Sensor: HT_sensor_onboard_step1.md
+          - Step 2 - Configure Parameters: HT_sensor_onboard_step2.md
+          - Step 3 - Network Logger: HT_sensor_onboard_step3.md
+          - Step 4 - Data Logger: HT_sensor_onboard_step4.md
+          - Troubleshooting: HT_sensor_onboard_troubleshooting.md
+          - Special Topics:
+              - RegEx Guide: RegExGuide.md
+  - User Interface:
+      - Overview: PAGES_tools.md
+      - Charts & Visualization: PAGES_charts.md
       - Sensor Plots: PAGES_plots.md
-      - Status: PAGES_status.md
-      - Sensors: PAGES_sensors.md
-      - Data: PAGES_data.md
-      - Documents: PAGES_documents.md
+      - System Status: PAGES_status.md
+      - Sensor Management: PAGES_sensors.md
+      - Data Management: PAGES_data.md
+      - Document Library: PAGES_documents.md
       - Settings: PAGES_settings.md
-      - My Account: PAGES_account.md
-  - APIs:
+      - Account Management: PAGES_account.md
+  - API Reference:
       - Use Cases: API_use_cases.md
       - Data Model: API_model.md
-      - API endpoints: API_endpoints.md
-  - ADMINISTRATION:
+      - Endpoints: API_endpoints.md
+  - Administration:
       - Installation: INSTALL_coriolix.md
-      - Upgrade: UPGRADE_coriolix.md
-      - Logs: LOGS_coriolix.md
-theme: readthedocs
+      - Upgrading: UPGRADE_coriolix.md
+      - Log Management: LOGS_coriolix.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/R-DESC
+  version:
+    provider: mike

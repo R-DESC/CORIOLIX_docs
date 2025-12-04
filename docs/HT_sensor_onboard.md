@@ -1,165 +1,108 @@
-# Onboarding a new instrument to CORIOLIX:
+# Sensor Onboarding Guide
 
-This guide provides an overview of the steps required to incorporate a new sensor
-into CORIOLIX.
+This guide provides a comprehensive overview of onboarding a new instrument to CORIOLIX. The process involves incorporating sensors into the system to enable data collection, processing, and access through the CORIOLIX interface.
 
-"Incorporate into CORIOLIX" is meant to encompass any actions needed to connect and communicate with sensor, configure a data logger for the sensor, and access the sensor and its data through CORIOLIX.
+!!! info "Prerequisites"
+    This guide assumes that:
+    
+    - The new sensor has been physically deployed on the vessel
+    - The sensor is operational and properly configured
+    - The sensor is configured to output RS-232 serial data
+    - You have appropriate access privileges in CORIOLIX
 
-This guide assumes that the new sensor has been deployed on the vessel and that the sensor is operational and configured to output RS-232 serial data.
+## Overview
 
-#### Step 1. Create a new sensor in CORIOLIX
+"Incorporate into CORIOLIX" encompasses all actions needed to:
 
-Logging data to CORIOLIX first requires the creation of a sensor record in the CORIOLIX database.  Because CORIOLIX manages all phases of the data lifecycle, and not simply logging, it requires us to specify a diverse and comprehensive set of metadata up front.  While all metadata fields are not strictly required, best practice is to maintain all fields.
+- Connect and communicate with the sensor
+- Configure a data logger for the sensor
+- Access the sensor and its data through CORIOLIX
+- Ensure proper data processing and quality control
 
-![](img/HT_Onboard_1.png)
+## Onboarding Process
 
-First, ensure that you are logged in and viewing the Sensor Details & Logs Page. This is where all
-new sensor records are created.  Choose the "Add New" option at the top left corner of the Sensor Details and Logs table.  This will load the New sensor setup form.
+The sensor onboarding process consists of four main steps:
 
-##### Sensor Overview
+### [Step 1: Create New Sensor](HT_sensor_onboard_step1.md)
 
-![](img/HT_Onboard_2.png)
+Create a comprehensive sensor record in the CORIOLIX database with all required metadata and configuration details.
 
-- ***Sensor ID*** - 6 digit alphanumeric identifier + last 6 digits of serial number
-- ***Sensor Name*** - Name provided by the manufacturer
-- ***Class*** - Generic classification used in CORIOLIX for grouping plots and displays
-- ***Type*** - Controlled NURC vocabulary options
-- ***Vendor*** - Controlled NURC vocabulary options
-- ***Serial Number*** - as marked on the instrument
-- ***Description*** - Free text
+**Key Activities:**
+- Define sensor overview and identification
+- Configure native data feed settings
+- Set up data format and parsing rules
+- Specify processing requirements
+- Document operating limits and ownership
 
-##### Native Data Feed
+### [Step 2: Configure Parameters](HT_sensor_onboard_step2.md)
 
-![](img/HT_Onboard_3.png)
+Define and configure individual sensor parameters for data processing and display.
 
-- ***Signal Type*** - Analog, Digital, or Derived (NOTE: only use Derived for synthetic sensors such as True Winds or similar)
-- ***Comm Type*** - Choose the analog carrier or the digital transmission protocol
-- ***Serial Details*** - Leave empty for non-serial instruments
-- ***Ethernet Details*** - Leave empty for non-ethernet enabled instruments
-- ***Native File Details*** - Complete only if the sensor data must be read from a file.
+**Key Activities:**
+- Set parameter names and descriptions
+- Define units and data specifications
+- Configure database storage options
+- Set up display preferences
 
-##### Native Data Format
+### [Step 3: Network Logger Setup](HT_sensor_onboard_step3.md)
 
-![](img/HT_Onboard_4.png)
+Create and configure the OpenRVDAS sensor-to-network logger for data transmission.
 
-- ***Native Data Description*** - Free text
-- ***Native Data Type*** - For digital data types, is the data encoded as text or binary?
+**Key Activities:**
+- SSH to peripheral OpenRVDAS system
+- Configure cruise configuration with wire2net settings
+- Restart logging services
 
-![](img/HT_Onboard_5.png)
+### [Step 4: Data Logger Setup](HT_sensor_onboard_step4.md)
 
-- ***Sample Data Message(s)*** - Capture one or more messages from the instrument and add them here for use in developing the Message Format String parsing expression.
+Establish the central data logger for processing and storing sensor data.
 
-![](img/HT_Onboard_6.png)
+**Key Activities:**
+- SSH to central OpenRVDAS system
+- Configure cruise configuration with net2db settings
+- Restart logging services
+- Verify data flow
 
-- ***Message Format String*** - A regular expression for parsing messages to named variables.  
+## Quick Navigation
 
-Using our 3D anemometer example message of "B, -000.08, +000.03, +000.01, M, +344.17, +020.92, 00, 3A"
+| Step | Description | Estimated Time |
+|------|-------------|----------------|
+| [Step 1](HT_sensor_onboard_step1.md) | Create Sensor Record | 15-30 minutes |
+| [Step 2](HT_sensor_onboard_step2.md) | Configure Parameters | 10-20 minutes |
+| [Step 3](HT_sensor_onboard_step3.md) | Network Logger | 5-10 minutes |
+| [Step 4](HT_sensor_onboard_step4.md) | Data Logger | 5-10 minutes |
 
-We want/need to parse out the following 6 values from the message and assign them names:
+!!! tip "Best Practices"
+    - Complete all metadata fields for better data management
+    - Test your regex parsing expressions thoroughly
+    - Document any custom processing requirements
+    - Verify data flow at each step before proceeding
 
-- unit_id = B
-- U_speed = -000.08
-- V_speed = 000.03
-- W_speed = 000.01
-- SOS = 344.17
-- Sonic_temp = 20.92
-- Status = 00
-- checksum = 3A
+## Special Topics
 
-To build a regex parser, first remember to enclose everything in ['']
+### [Regular Expression (RegEx) Guide](RegExGuide.md)
 
-- Next add a start of line character, ^, to make: ['^']
-- Next add in one open and closed parentheses pair, comma separated, for each value to parse to make: ['^(),(),(),(),(),()']
-- Add in any characters for unused message parts to make: ['^(),(),(),(),M,(),()']
-- Finally write the unique parse and name assignment regex for each variable and insert into the appropriate positional parenthetical.
-- Use the (?<variable_name>regex) format to match patterns and assign names.  
-- To parse the letter "B" and assign it to the variable "unit_id" requires this parse string (?P<unit_id>\w+).
+Learn how to build regular expressions for parsing sensor messages. This comprehensive guide walks through creating regex patterns for NMEA-style messages and other sensor data formats.
 
-Our Message Format String is now: ['^(?P<unit_id>\w+),(),(),(),(),()']
+**Topics Covered:**
+- Understanding message structure
+- Building regex patterns step-by-step
+- Named capture groups for data extraction
+- Handling optional fields and variable formats
+- CORIOLIX-specific regex implementation
 
-- Continue to build your parse string.  
-- Use the Verify Format button to test your parser.
+!!! tip "Essential for Step 1"
+    Understanding regex patterns is crucial for completing the Message Format String in Step 1. Review this guide before attempting to parse complex sensor messages.
 
-##### Data Processing Script
+## Getting Help
 
-The data processing script name identifies which pre-written data transformation module to use.  If the message data needs no calibration or transformation, set this value to: NoTransformation
+If you encounter issues during the onboarding process:
 
-![](img/HT_Onboard_7.png)
+- Check the [troubleshooting section](HT_sensor_onboard_troubleshooting.md) for common problems
+- Review the [RegEx Guide](RegExGuide.md) for help with message parsing
+- Review the [API documentation](../API_endpoints.md) for technical details
+- Contact the CORIOLIX support team for assistance
 
-##### Operating Limits
+---
 
-Complete as many of the equipment operating limit information as possible.  This information can be used for QA/QC purposes.
-
-![](img/HT_Onboard_8.png)
-
-##### Ownership Information
-
-![](img/HT_Onboard_9.png)
-
-##### Current Physical Status
-
-![](img/HT_Onboard_10.png)
-
-##### Vessel Installation Location
-
-![](img/HT_Onboard_11.png)
-
-##### Data Rates
-
-![](img/HT_Onboard_12.png)
-
-##### Data Storage & Access
-
-![](img/HT_Onboard_13.png)
-
-##### Time Source
-
-![](img/HT_Onboard_14.png)
-
-#####Calibration and Maintenance
-
-![](img/HT_Onboard_15.png)
-
-##### Submit Initial Sensor Configuration
-
-![](img/HT_Onboard_16.png)
-
-#### Step 2. Configure Sensor Parameters
-
-Only after saving the new sensor, and thus creating a CORIOLIX database record for the instrument, can parameters be added.  Open the sensor edit form again and find the parameters section.
-
-![](img/HT_Onboard_17.png)
-
-##### Parameter Overview
-
-![](img/HT_Onboard_18.png)
-
-- ***Parameter Long Name*** - Free text, should be selected from local standard vocabulary
-- ***Parameter Short Name*** - Free text, should be selected from local standard vocabulary
-- ***Parameter Description*** - Free text,
-- ***SAMOS Data Category*** -
-- ***Processing Status*** -
-- ***Processing Symbol*** - The name or symbol used by the calibration/transformation module to reference this parameter.  Leave blank for sensors implementing NoTransformation.  NOTE: consult the cal/trans module documentation to select the appropriate processing symbol.
-- ***Diagnostic Parameter*** -
-- ***Internal ID*** - a unique identifier auto generated by CORIOLIX
-
-##### Standard Name & Units
-##### Data Value Specifications
-##### Database Storage
-##### Online Display
-
-#### Step 3. Create an OpenRVDAS sensor to network logger
-
-- SSH to the OpenRVDAS peripheral system that you've already connected your RS-232 instrument to.
-
-- Run the "create_cruise_configuration" script with the wire2net flag set.
-
-- Restart logging on the peripheral OpenRVDAS system
-
-#### Step 4. Create an OpenRVDAS data logger
-
-- SSH to the central OpenRVDAS system
-
-- Run the "create_cruise_configuration" script with the net2db flag set.
-
-- Restart logging on the peripheral OpenRVDAS system
+**Next:** Begin with [Step 1: Create New Sensor](HT_sensor_onboard_step1.md)

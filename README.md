@@ -1,45 +1,78 @@
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+# CORIOLIX Documentation
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
+[![Build Status](https://github.com/R-DESC/CORIOLIX_docs/workflows/ci/badge.svg)](https://github.com/R-DESC/CORIOLIX_docs/actions)
+[![Documentation](https://img.shields.io/badge/docs-latest-blue.svg)](https://r-desc.github.io/CORIOLIX_docs/)
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
+This repository contains the official documentation for CORIOLIX (**C**ruise **O**bservation **R**eal-Time **I**nterface for **L**ive **I**nformation **E**xchange), a real-time oceanographic data acquisition and processing system for research vessels.
 
----
+## About CORIOLIX
 
-## Edit a file
+CORIOLIX was developed during the construction of the Regional Class Research Vessels (RCRVs) for the US Academic Research Fleet (ARF) and established as an ARF Specialized Service Pilot in 2023. The system provides near real-time access to vessel data through a comprehensive web interface.
 
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
+## Documentation Structure
 
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: 
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
+- **Getting Started**: System access, account setup, and basic usage
+- **User Interface**: Detailed guides for all web interface components
+- **API Reference**: Complete API documentation and usage examples
+- **Administration**: Installation, upgrade, and maintenance procedures
 
----
+## Local Development
 
-## Create a file
+### Prerequisites
 
-Next, you’ll add a new file to this repository.
+- Python 3.8+
+- pip
 
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
+### Setup
 
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/R-DESC/CORIOLIX_docs.git
+   cd CORIOLIX_docs
+   ```
 
----
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-## Clone a repository
+3. Serve the documentation locally:
+   ```bash
+   mkdocs serve
+   ```
 
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
+4. Open your browser to `http://127.0.0.1:8000`
 
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
+### Building
 
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+To build the static site:
+
+```bash
+mkdocs build
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Make your changes
+4. Test locally with `mkdocs serve`
+5. Commit your changes (`git commit -m 'Add amazing feature'`)
+6. Push to the branch (`git push origin feature/amazing-feature`)
+7. Open a Pull Request
+
+## Related Repositories
+
+- [CORIOLIX_app](https://github.com/R-DESC/CORIOLIX_app) - Main application
+- [CORIOLIX_install](https://github.com/R-DESC/CORIOLIX_install) - Installation scripts
+
+## License
+
+This project is part of the US Academic Research Fleet infrastructure. Please contact R-DESC for licensing information.
+
+## Support
+
+For questions or support, please:
+- Check the [documentation](https://r-desc.github.io/CORIOLIX_docs/)
+- Open an issue in this repository
+- Contact the R-DESC team
