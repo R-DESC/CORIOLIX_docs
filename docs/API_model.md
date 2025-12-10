@@ -49,7 +49,7 @@ Represents the research vessel and its configuration.
   "vessel_id": "TAANI",
   "long_name": "R/V Taani",
   "call_sign": "WQRS",
-  "operating_institute": "University of Alaska Fairbanks"
+  "operating_institute": "Oregon State University"
 }
 ```
 
@@ -85,7 +85,7 @@ Represents a physical instrument that collects data.
 **Example Response:**
 ```json
 {
-  "sensor_id": "SEAPTH000000",
+  "sensor_id": "seatmp000000",
   "sensor_name": "SBE 38 Digital Oceanographic Thermometer",
   "sensor_class": "Flowthrough",
   "sensor_type": "Temperature",
