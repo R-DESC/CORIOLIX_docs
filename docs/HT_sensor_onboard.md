@@ -104,7 +104,7 @@ If you encounter issues during the onboarding process:
 
 - Check the [troubleshooting section](HT_sensor_onboard_troubleshooting.md) for common problems
 - Review the [RegEx Guide](RegExGuide.md) for help with message parsing
-- Review the [API documentation](../API_endpoints.md) for technical details
+- Review the [API documentation](API_endpoints.md) for technical details
 - Contact the CORIOLIX support team for assistance
 
 ---
