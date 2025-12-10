@@ -52,7 +52,7 @@ Most CORIOLIX API endpoints require authentication. You'll need:
 
 - A valid CORIOLIX account
 - Your username and password for basic authentication
-- OR an API token (if your institution uses token-based auth)
+- OR an API token (in development and coming soon)
 
 !!! warning "Security Note"
     Never hard-code passwords in your scripts. Use environment variables or configuration files that are not committed to version control.
@@ -154,15 +154,15 @@ JSON (JavaScript Object Notation) is ideal for programmatic access:
 
 ```json
 {
-  "sensor_id": "SEAPTH000000",
-  "sensor_name": "SBE 38 Digital Oceanographic Thermometer",
-  "sensor_type": "Temperature",
+  "sensor_id": "seatem381110",
+  "sensor_name": "Forward Intake Thermometer",
+  "sensor_type": "Thermometer, Water",
   "sensor_class": "Flowthrough",
   "parameters": [
     {
       "short_name": "Temperature",
-      "long_name": "Sea Surface Temperature",
-      "units_abbrev": "degC"
+      "long_name": "Temperature",
+      "units_abbrev": "degrees_C"
     }
   ]
 }
@@ -179,8 +179,8 @@ CSV (Comma-Separated Values) is ideal for tabular data:
 
 ```csv
 timestamp,sensor_id,temperature,salinity
-2025-12-03T10:00:00Z,TSG001,15.2,34.5
-2025-12-03T10:01:00Z,TSG001,15.3,34.6
+2025-12-03T10:00:00Z,seatsg450712,15.2,34.5
+2025-12-03T10:01:00Z,seatsg450712,15.3,34.6
 ```
 
 **Benefits:**
