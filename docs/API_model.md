@@ -45,11 +45,23 @@ Represents the research vessel and its configuration.
 **Example Response:**
 ```json
 {
-  "vessel_uuid": "123e4567-e89b-12d3-a456-426614174000",
-  "vessel_id": "TAANI",
-  "long_name": "R/V Taani",
-  "call_sign": "WQRS",
-  "operating_institute": "Oregon State University"
+  "vessel_uuid": "9b3f9eb0-1166-47a4-95a7-3e795cb9d796",
+  "vessel_id": "Point Sur",
+  "long_name": "Point Sur",
+  "vessel_type": "RV",
+  "operating_institute": "LUMCON",
+  "operating_country": "USA",
+  "home_port": "Gulfport, MS",
+  "website": "https://lumcon.edu/rv-pt-sur/",
+  "IMO": "8023539",
+  "MMSI": "367720010",
+  "ICES": "0000",
+  "call_sign": "WDI6566",
+  "length_meters": 37.8,
+  "breadth_meters": 9.75,
+  "freeboard_meters": null,
+  "draft_meters": null,
+  "enabled": false
 }
 ```
 
@@ -85,15 +97,16 @@ Represents a physical instrument that collects data.
 **Example Response:**
 ```json
 {
-  "sensor_id": "seatmp000000",
-  "sensor_name": "SBE 38 Digital Oceanographic Thermometer",
+  "sensor_id": "seatem381110",
+  "sensor_uuid": null,
+  "sensor_name": "Forward Intake Thermometer",
   "sensor_class": "Flowthrough",
-  "sensor_type": "Temperature",
-  "vendor": "Sea-Bird Scientific",
-  "model": "SBE38",
-  "serial_number": "000000",
-  "comm_type": "RS-232",
-  "sample_rate_hz": 1.0
+  "sensor_type": "Thermometer, Water",
+  "sensor_prefix": "thermw",
+  "vendor": "Sea-Bird Scientific (Sea-Bird Electronics)",
+  "model": "Sea-Bird SBE 38 thermometer",
+  "serial_number": "38-1110",
+  "comm_type": "RS-232"
 }
 ```
 
