@@ -27,7 +27,6 @@ theme:
   features:
     - navigation.tabs
     - navigation.sections
-    - navigation.expand
     - navigation.path
     - navigation.top
     - search.highlight
@@ -65,38 +64,56 @@ plugins:
 
 nav:
   - Home: index.md
-  - Getting Started:
-      - System Access: HT_access.md
-      - Account Creation: HT_account.md
-      - Data Access: HT_data_access.md
-      - Sensor Onboarding:
-          - Overview: HT_sensor_onboard.md
-          - Step 1 - Create Sensor: HT_sensor_onboard_step1.md
-          - Step 2 - Configure Parameters: HT_sensor_onboard_step2.md
-          - Step 3 - Network Logger: HT_sensor_onboard_step3.md
-          - Step 4 - Data Logger: HT_sensor_onboard_step4.md
-          - Troubleshooting: HT_sensor_onboard_troubleshooting.md
-          - Special Topics:
-              - RegEx Guide: RegExGuide.md
-  - User Guide:
-      - Charts & Visualization: PAGES_charts.md
-      - Sensor Plots: PAGES_plots.md
-      - System Status: PAGES_status.md
-      - Sensor Management: PAGES_sensors.md
-      - Data Management: PAGES_data.md
-      - Document Library: PAGES_documents.md
-      - Settings: PAGES_settings.md
-      - Account Management: PAGES_account.md
-      - Cruise Tools: PAGES_tools.md
-  - API Reference:
+
+  - User Guide (Scientific Users):
+      - Quick Start:
+          - System Access: HT_access.md
+          - Account Creation: HT_account.md
+
+      - Using CORIOLIX:
+          - Dashboard Overview: PAGES_status.md
+          - Live Data Streams: PAGES_data.md
+          - Charts & Visualization: PAGES_charts.md
+          - Sensor Plots: PAGES_plots.md
+          - Document Library: PAGES_documents.md
+          - Sensor Management: PAGES_sensors.md
+          - Settings: PAGES_settings.md
+          - Account Management: PAGES_account.md
+          - Cruise Tools: PAGES_tools.md
+          - Data Services:
+              - Data Products & Structure: HT_data_access.md
+              - Export Data: export_data.md # need to create this page
+      - Troubleshooting & FAQs: HT_faq_sci.md # need to create this page
+
+  - Administration Guide (Marine Technicians and IT Technicians):
+      - Getting Started: admin_getting_started.md
+
+      - Ship Operations:
+          - Log Management: LOGS_coriolix.md
+          - Sensor Integration:
+              - Overview: HT_sensor_onboard.md
+              - Step 1 – Create Sensor: HT_sensor_onboard_step1.md
+              - Step 2 – Configure Parameters: HT_sensor_onboard_step2.md
+              - Step 3 – Network Logger: HT_sensor_onboard_step3.md
+              - Step 4 – Data Logger: HT_sensor_onboard_step4.md
+              - Troubleshooting: HT_sensor_onboard_troubleshooting.md
+              - Special Topics:
+                  - RegEx Guide: RegExGuide.md
+      - System Administration:
+          - Installation Guide: INSTALL_coriolix.md
+          - Upgrading: UPGRADE_coriolix.md
+          - System Architecture: ADMIN_system_architecture.md # need to create this page
+          - Backup & Restore: ADMIN_backup_restore.md # need to create this page
+      - Troubleshooting & FAQs: HT_faq_admin.md # need to create this page
+
+  - Programmers Guide:
       - Getting Started: API_getting_started.md
-      - Use Cases: API_use_cases.md
+      - Data Services:
+          - ERDDAP: Api_erddap.md # need to create this page
+          - RestAPI: API_endpoints.md
+      - API Use Cases: API_use_cases.md
       - Data Model: API_model.md
-      - Endpoints: API_endpoints.md
-  - Administration:
-      - Installation: INSTALL_coriolix.md
-      - Upgrading: UPGRADE_coriolix.md
-      - Log Management: LOGS_coriolix.md
+      - Troubleshooting & FAQs: HT_faq_programmers.md # need to create this page
 
 extra:
   social:
