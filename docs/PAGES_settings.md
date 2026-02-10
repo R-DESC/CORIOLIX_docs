@@ -11,9 +11,9 @@ From the CORIOLIX navigation menu, click **Settings** to access a dropdown with 
 1. **Flowthrough Configuration** - Manage valve operating parameters for flowthrough sampling systems
 2. **Data Management** - Control data logging, retention policies, and real-time transmission settings
 3. **Account Management** - Manage user accounts, permissions, and access levels
-4. **System Management** - Perform system maintenance, refresh configurations, and update deployments
+4. **System Management** - Refresh sytem configuration
 
-**Note:** All Settings sections are restricted to administrative users only. Non-admin users will see read-only views where available.
+**Note:** All Settings sections are restricted to support users only. Non-support users will see read-only views where available. The Account Management section is limited to administrators only.
 
 ---
 
@@ -117,7 +117,7 @@ A system-wide message shown to all CORIOLIX users.
 Indicates the importance level of the displayed message.
 
 - **Range**: 1 (Low) to 3 (High)
-- **Impact**: Higher severity messages may be highlighted More prominently in the interface
+- **Impact**: Higher severity messages may be highlighted more prominently in the interface
 - **Recommended**: 1 for routine notices, 2-3 for urgent matters
 
 ### Data Logging Settings
@@ -238,13 +238,14 @@ Duration for retaining processed data in the CORIOLIX database accessible via we
 
 The Account Management page allows administrators to manage CORIOLIX user accounts, assign permission levels, and control data access privileges.
 
+**Note:** This page is only accessible to CORIOLIX administrators.
 **Note:** These settings apply to CORIOLIX instances on both the ship and shore.
 
 ### Accessing Account Management
 
 1. From the main navigation menu, click **Settings** → **Account Management**
 2. The page shows two tables: Active Accounts and Inactive Accounts
-3. Account modifications require administrative privileges
+3. Account viewing and modifications require administrative privileges
 
 ### Active Accounts Table
 
@@ -259,7 +260,7 @@ Displays all currently active user accounts with sortable columns:
 | **Last Login** | Most recent login date |
 | **Role** | User's assigned role |
 | **Permission Level** | Access level to system features |
-| **Designated Contact** | Whether user is designated emergency contact |
+| **Designated Contact** | Whether user is designated data contact |
 | **Data Access Level** | Access to private/sensitive data |
 | **Allow Login** | Whether account is enabled for log-in |
 
@@ -276,15 +277,13 @@ Four permission levels control feature access:
 
 #### Designated Contact
 
-Check the **Designated Contact** checkbox to mark a user as an emergency contact. These users receive critical system notifications and alerts.
+Check the **Designated Contact** checkbox to mark a user as the primary data contact. The contact information for these users are included with data delivered to long-term archives.
 
 #### Data Access Level
 
 Check the **Private Data Access** checkbox to grant a user access to:
 
 - Confidential cruise data before public release
-- Raw quality-controlled data
-- Restricted observation periods
 
 #### Allow Login
 
@@ -296,6 +295,7 @@ Check the **Allow Login** checkbox to enable an account for user sign-in. Unchec
 2. Review your changes carefully
 3. Click **Submit** to apply changes to both ship and shore systems
 4. Click **Cancel** to discard changes
+5. Account changes take effect immediately.
 
 ### Inactive Accounts Table
 
@@ -304,24 +304,25 @@ Displays user accounts that have been disabled (Allow Login unchecked). These ca
 ### Account Management Best Practices
 
 - **Principle of Least Privilege**: Assign the minimum permission level needed for each user's role
-- **Designated Contacts**: Maintain at least 2-3 designated emergency contacts
+- **Designated Contacts**: Maintain at least 2-3 designated data contacts
 - **Regular Review**: Periodically review active accounts and remove departed team members
 - **Access Control**: Use data access restrictions for sensitive pre-publication data
 - **Documentation**: Record account modifications and the reason for changes
 - **Permission Levels**: Use Science level for researchers, Support for IT staff, Admin only as needed
+- **Shared Accounts**: Disallow the use of shared accounts (e.g. techs@myship.edu) to ensure accountability
 
 ---
 
 ## System Management
 
-The System Management page provides tools for CORIOLIX system maintenance, configuration updates, and deployment refresh operations.
+The System Management page provides access to CORIOLIX system refresh operations.
 
 **Important Note:** System Management actions ONLY affect the local CORIOLIX instance (either ship OR shore, not both).
 
 ### Accessing System Management
 
 1. From the main navigation menu, click **Settings** → **System Management**
-2. Only administrators can view this section
+2. Only user with support roles can view this section
 3. A single action button is displayed: **Refresh CORIOLIX**
 
 ### Refresh CORIOLIX Operation
@@ -341,8 +342,8 @@ A CORIOLIX refresh is recommended after any of the following:
 #### Starting a Refresh
 
 1. Click the **Refresh CORIOLIX** button
-2. The refresh process begins automatically and progresses through 8 steps
-3. A progress indicator shows: "Step X of 8..."
+2. The refresh process begins automatically and progresses through multiple steps
+3. A progress indicator shows: "Step X of 9..."
 4. **Typical duration**: 20 seconds
 5. The page displays output for each step as it completes
 
@@ -356,23 +357,25 @@ The refresh operation performs these steps sequentially:
 4. **Update ERDDAP Datasets** - Refreshes data exposure to external data discovery services
 5. **Update pgAgent Jobs** - Schedules automated tasks (rolling tables, alerts, maintenance)
 6. **Update Table Triggers** - Implements database triggers for real-time processing
-7. **Implement New OpenRVDAS Configurations** - Deploys updated acquisition configurations
-8. **Update and Restart ERDDAP** - Restarts the environmental data services
+7. **Update Primary Parameter Configurations** - Updates which parameters should be designated as primary
+8. **Implement New OpenRVDAS Configurations** - Deploys updated acquisition configurations
+9. **Update and Restart ERDDAP** - Restarts external data discovery services
 
 #### Monitoring the Refresh
 
 - Watch the step counter as the refresh progresses
 - Monitor the output panel for error messages or warnings
-- Once Step 8 completes, the refresh is finished
+- Once Step 9 completes, the refresh is finished
 - The button returns to **Refresh CORIOLIX**, indicating readiness for another refresh if needed
 
-#### Disabling Refresh for Non-Admin Users
+#### Disabling Refresh for Non-Support Users
 
-The button shows as **Refresh CORIOLIX (disabled)** for non-administrative users.
+The button shows as **Refresh CORIOLIX (disabled)** for users without adequate permissions.
 
 ### System Management Best Practices
 
 - **Schedule Refreshes Strategically**: Perform refreshes during low-traffic periods to minimize user impact
+- **Inform Users**: Inform active users of potential downtime
 - **Back Up Configuration**: Keep backup copies of critical configuration files before major changes
 - **Test Changes**: Test sensor or parameter changes in a non-critical system before deploying to production
 - **Document Changes**: Record what configuration changes triggered the refresh
