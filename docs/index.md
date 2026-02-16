@@ -21,7 +21,7 @@ CORIOLIX (**C**ruise **O**bservation **R**eal-Time **I**nterface for **L**ive **
     
     - Okeanos Explorer
     - Gordon Gunter
-    - Bell H. Shimada
+    - Bell M. Shimada
 
 ## Background
 
