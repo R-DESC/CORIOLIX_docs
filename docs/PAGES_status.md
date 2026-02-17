@@ -6,7 +6,7 @@ This page provides a quick table style view of every active (enabled) scientific
 ## Sensor Status
 The status of a parameter is indicated by the color of the cell.  Black cells are normal (ok).  Cell color other than black indicates that the parameter is experiencing an abnormal condition and a warning has been issued.  
 
-These status indicators are customizable per user. Instructions on how to configure them to your specific needs can be found in the "Setting Up Your User Specific Alerts" section on the [Accounts](https://r-desc.github.io/CORIOLIX_docs/HT_account/#setting-up-your-user-specific-alerts) page. 
+These status indicators are customizable per user. Instructions on how to configure them to your specific needs can be found in the "Setting Up Your User Specific Alerts" section at the bottom of the [Accounts](PAGES_account.md) page. 
 
 ![](img/status_table.png)
 
