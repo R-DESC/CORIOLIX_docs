@@ -97,6 +97,7 @@ nav:
               - Step 2 – Configure Parameters: HT_sensor_onboard_step2.md
               - Step 3 – Network Logger: HT_sensor_onboard_step3.md
               - Step 4 – Data Logger: HT_sensor_onboard_step4.md
+              - CTD Configuration: HT_CTD_Configuration.md
               - Troubleshooting: HT_sensor_onboard_troubleshooting.md
               - Special Topics:
                   - RegEx Guide: RegExGuide.md
