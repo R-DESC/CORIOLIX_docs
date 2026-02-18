@@ -1,13 +1,13 @@
 # Data Access
 
-CORIOLIX provides access to varied data products (raw, high-resolution, and binned) via multiple modes (data download, API, data services).  Please review the details related to data structure options and access methods described here to identify the best match for your needs.
+CORIOLIX provides access to raw, high-resolution, and binned data products via multiple modes including data download, API, and data services. Please review the details related to data structure options and access methods described here to identify the best match for different needs.
 
 ## Temporal Structure Details
 
 ### Native Unmodified Data
-All sensor data received by CORIOLIX are archived as ASCII flat files, one file per sensor per day. The unmodified raw messages (strings) are stored at the native resolution collected by the sensor. The format of the strings varies by sensor. Each message string is prepended with the UTC timestamp of receipt. No quality control has been performed on these data.
+All sensor data received by CORIOLIX are archived as ASCII flat files, one file per sensor per day. The unmodified raw message strings are stored at the native resolution collected by the sensor. The format of the strings varies by sensor. Each message string is prepended with the UTC timestamp upon receipt. No quality control has been performed on these data.
 
-### High Resolution Date
+### High Resolution Data
 For real-time applications, a subset of sensor data are extracted and stored within CORIOLIX. These searchable datasets are available at 1 Hz resolution or below. The collection timestamps and data values are unmodified. Preliminary quality control flags are provided as an additional field. 
 
 ### Binned Data
@@ -15,11 +15,11 @@ These data are provided in temporal (e.g. one-minute) bins. The mean and accompa
 
 #### Binning Method
 
-Data are binned using an (unweighted) mean over a set time interval. Statistics are also captured (std, min, max, num, spotval, median) and made available to the end-user.
+Data are binned using an unweighted mean over a set time interval. Statistics are also captured (std, min, max, num, spotval, median) and made available to the end-user.
 
-Circular data (such as heading or wind direction) are averaged using circular mean and circular standard deviation calculations. For example, the circular average of 355 and 5 is 0 not 180.
+Circular data such as heading or wind direction are averaged using circular mean and circular standard deviation calculations. For example, the circular average of 355 and 5 is 0 not 180.
 
-Vector data (such as true winds) are averaged using vector averaging. First, the components (u,v,w) are each averaged using a simple mean. These mean components are then used to derive the mean direction and mean magnitude:
+Vector data such as true winds are averaged using vector averaging. First, the components (u,v,w) are each averaged using a simple mean. These mean components are then used to derive the mean direction and mean magnitude:
 mean_direction = rad2deg(atan2(mean_u, mean_v)) + 180
 mean_magnitude = sqrt(mean_u^2 + mean_v^2)
 
