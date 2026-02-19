@@ -2,13 +2,12 @@
 
 This guide provides a comprehensive overview of onboarding a new instrument to CORIOLIX. The process involves incorporating sensors into the system to enable data collection, processing, and access through the CORIOLIX interface.
 
-!!! info "Prerequisites"
-    This guide assumes that:
-    
-    - The new sensor has been physically deployed on the vessel
-    - The sensor is operational and properly configured
-    - The sensor is configured to output RS-232 serial data
-    - You have appropriate access privileges in CORIOLIX
+>[!NOTE]
+ This guide assumes that:
+> * The new sensor has been physically deployed on the vessel
+> * The sensor is operational and properly configured
+> * The sensor is configured to output RS-232 serial data
+> * You have appropriate access privileges in CORIOLIX
 
 ## Overview
 
@@ -76,11 +75,12 @@ Establish the central data logger for processing and storing sensor data.
 | [Step 3](HT_sensor_onboard_step3.md) | Network Logger | 5-10 minutes |
 | [Step 4](HT_sensor_onboard_step4.md) | Data Logger | 5-10 minutes |
 
-!!! tip "Best Practices"
-    - Complete all metadata fields for better data management
-    - Test your regex parsing expressions thoroughly
-    - Document any custom processing requirements
-    - Verify data flow at each step before proceeding
+>[!TIP]
+>Best Practices
+>- Complete all metadata fields for better data management
+>- Test your regex parsing expressions thoroughly
+>- Document any custom processing requirements
+>- Verify data flow at each step before proceeding
 
 ## Special Topics
 
@@ -95,8 +95,11 @@ Learn how to build regular expressions for parsing sensor messages. This compreh
 - Handling optional fields and variable formats
 - CORIOLIX-specific regex implementation
 
-!!! tip "Essential for Step 1"
-    Understanding regex patterns is crucial for completing the Message Format String in Step 1. Review this guide before attempting to parse complex sensor messages.
+>[!IMPORTANT]
+>Understanding regex patterns is crucial for completing the Message Format String in Step 1. Review this guide before attempting to parse complex sensor messages.
+
+### Importing and Exporting Sensors
+If a sensor already exists in one CORIOLIX installation, there is a quick way to add it to another. Navigate to the Sensor List page that has the desired sensor. Logging in is not necessary. From the dropdown menu, select "Export Sensor". It will download a copy of the sensor's metadata as a .csv. To add it to a different ship/istallation, log in and navigate to the Sensor List page. Click "Import" at the top of the page and upload the .csv file. Check that all the metadata filled in properly and be sure to assign it to the correct ship. 
 
 ## Getting Help
 
