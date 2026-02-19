@@ -2,8 +2,10 @@
 
 This guide introduces scientists and researchers to the CORIOLIX REST API, enabling programmatic access to vessel sensor data for custom analysis, visualization, and integration workflows.
 
-!!! info "Who This Guide Is For"
-    This documentation is designed for researchers with programming experience in Python, R, MATLAB, or similar scientific computing environments who want to access CORIOLIX data programmatically.
+>[!NOTE]
+>Who This Guide Is For
+>
+>This documentation is designed for researchers with programming experience in Python, R, MATLAB, or similar scientific computing environments who want to access CORIOLIX data programmatically.
 
 ## What is a REST API?
 
@@ -21,10 +23,10 @@ A REST API (Representational State Transfer Application Programming Interface) i
 The CORIOLIX web interface is great for interactive work, but the API enables:
 
 - **Automated Data Retrieval**: Scheduled scripts to download data regularly
-- **Custom Analysis**: Process data with your preferred scientific libraries (pandas, numpy, scipy, etc.)
-- **Integration**: Incorporate CORIOLIX data into your existing workflows and tools
+- **Custom Analysis**: Process data with preferred scientific libraries (pandas, numpy, scipy, etc.)
+- **Integration**: Incorporate CORIOLIX data into existing workflows and tools
 - **Bulk Operations**: Efficiently retrieve large datasets
-- **Reproducible Research**: Script your data access for repeatable analyses
+- **Reproducible Research**: Script data access for repeatable analyses
 
 ## Prerequisites
 
@@ -51,22 +53,24 @@ install.packages(c("httr", "jsonlite", "dplyr"))
 Most CORIOLIX API endpoints require authentication. You'll need:
 
 - A valid CORIOLIX account
-- Your username and password for basic authentication
+- Username and password for basic authentication
 - OR an API token (in development and coming soon)
 
-!!! warning "Security Note"
-    Never hard-code passwords in your scripts. Use environment variables or configuration files that are not committed to version control.
+>[!WARNING]
+>Security Note
+>
+>Never hard-code passwords in scripts. Use environment variables or configuration files that are not committed to version control.
 
-## Your First API Request
+## First API Request
 
 ### Understanding the Base URL
 
 All CORIOLIX API endpoints start with:
 ```
-https://your-vessel.coriolix.org/api/
+https://example-vessel.coriolix.org/api/
 ```
 
-Replace `your-vessel.coriolix.org` with your actual CORIOLIX instance URL.
+Replace `example-vessel.coriolix.org` with the actual CORIOLIX instance URL.
 
 ### Example 1: Listing Available Sensors (Python)
 
@@ -75,9 +79,9 @@ import requests
 from requests.auth import HTTPBasicAuth
 
 # Configuration
-BASE_URL = "https://your-vessel.coriolix.org/api"
-USERNAME = "your_username"
-PASSWORD = "your_password"
+BASE_URL = "https://example-vessel.coriolix.org/api"
+USERNAME = "username"
+PASSWORD = "password"
 
 # Make the request
 response = requests.get(
@@ -109,9 +113,9 @@ library(httr)
 library(jsonlite)
 
 # Configuration
-BASE_URL <- "https://your-vessel.coriolix.org/api"
-USERNAME <- "your_username"
-PASSWORD <- "your_password"
+BASE_URL <- "https://example-vessel.coriolix.org/api"
+USERNAME <- "username"
+PASSWORD <- "password"
 
 # Make the request
 response <- GET(
@@ -141,8 +145,8 @@ if (status_code(response) == 200) {
 ### Example 3: Using curl (Command Line)
 
 ```bash
-curl -X GET "https://your-vessel.coriolix.org/api/sensor/?format=json" \
-  -u "your_username:your_password" \
+curl -X GET "https://example-vessel.coriolix.org/api/sensor/?format=json" \
+  -u "username:password" \
   | jq '.[0]'  # Use jq to pretty-print the first sensor
 ```
 
@@ -213,7 +217,7 @@ Most API endpoints support these parameters:
 | `date_after` | Filter by start time | `?date_after=2025-12-01T00:00:00Z` |
 | `date_before` | Filter by end time | `?date_before=2025-12-03T23:59:59Z` |
 
-## Working with Timestamps
+## Working With Timestamps
 
 CORIOLIX uses ISO 8601 format for timestamps:
 
@@ -296,7 +300,7 @@ USERNAME = os.environ.get("CORIOLIX_USERNAME")
 PASSWORD = os.environ.get("CORIOLIX_PASSWORD")
 ```
 
-Set in your terminal:
+Set in terminal:
 ```bash
 export CORIOLIX_USERNAME="your_username"
 export CORIOLIX_PASSWORD="your_password"
