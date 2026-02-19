@@ -70,7 +70,7 @@ The message may be prefixed with extra information from SCS like a timestamp and
 |---|---|
 | Class | OverTheSide |
 | Enabled | True |
-| Vessel | *must be assigned to your vessel* |
+| Vessel | *must be assigned to the correct vessel* |
 | Location When Installed | CTD Rosette  (or “CTD Rosette - spare”) |
 | OpenRVDAS Logging | file and database (file/db) |
 | Native Data Feed | *this entire section should be empty* |
@@ -87,7 +87,7 @@ The message may be prefixed with extra information from SCS like a timestamp and
 | Type | CTD |
 | Model |	Sea-Bird SBE 911plus CTD |
 | Enabled	|	True |
-| Vessel | *must be assigned to your vessel* |
+| Vessel | *must be assigned to the correct vessel* |
 | Location When Installed | CTD Rosette (or “CTD Rosette - spare”) |
 | Signal type | Digital |
 | Comm type | Ethernet (*this assumes the data are from SCS*) |
@@ -99,8 +99,10 @@ The message may be prefixed with extra information from SCS like a timestamp and
 | UDP port | 50201 (*for example*) |
 | OpenRVDAS Logger Mode | file and database |
 
-*Note: The SBE 11 should not have any parameters.*
-*Note: The Message Format String must include a field called “depth” (exactly).  The CTD plots look for a field named “depth” to be used as the Y axis for the CTD profile plots.*
+>[!IMPORTANT]
+>Settings to watch out for
+>- The SBE 11 should not have any parameters.
+>- The Message Format String must include a field called “depth” (exactly).  The CTD plots look for a field named “depth” to be used as the Y axis for the CTD profile plots.
 
 
 **SBE 9 (main profiling unit)**
@@ -110,7 +112,7 @@ The message may be prefixed with extra information from SCS like a timestamp and
 | Type | CTD |
 | Model | Sea-Bird SBE 9plus CTD |
 | Enabled | True |
-| Vessel | *must be assigned to your vessel* |
+| Vessel | *must be assigned to the correct vessel* |
 | Location When Installed	|	CTD Rosette (or “CTD Rosette - spare”) |
 | Native Data Feed | *this entire section should be empty* |
 | Native Data Format | *this entire section should be empty* |
@@ -120,14 +122,16 @@ The message may be prefixed with extra information from SCS like a timestamp and
 | processing_symbol | “depth” |
 | Plot Type | “time series” |
 | Plot IDs (Group) | A,B,C,D,E,F,G |
-NOTE: The “depth” parameter from the SBE9 must be assigned to every plot on the “Group” plot page (i.e. the CTD profile plot page).  This is because profile plots require depth information.
+
+>[!IMPORTANT]
+>The “depth” parameter from the SBE9 must be assigned to every plot on the “Group” plot page (i.e. the CTD profile plot page). This is because profile plots require depth information.
 
 
 ## CTD Parameter Metadata Settings
 
 Each sensor associated with the CTD carousel (e.g.SBE 3P (temperature)) should have their relevant parameters associated with it.  
 
-Processing Symbol			temperature_1 (*this is just an example*)
+Processing Symbol:	temperature_1 (*this is just an example*)
 
  The processing symbol must match the term used in the “Message Format String” (regex) in the deck box metadata.  The processing symbol is what is used to match the data message value to a specific parameter.  For example, for the deck box message format string:
 ['^\s*(?P<depth>\-?\d+\.\d*)\s+(?P<temperature_1>\-?\d+\.\d*)\s+(?P<salinity_1>\-?\d+\.\d*)\.*$']
@@ -139,7 +143,8 @@ The processing symbol for the temperature value should be “temperature_1” in
 | Plot IDs (Sensor) | A (or B, C, etc.) (*time series plots on the sensor plot page*) |
 | Plot IDs (Group) | A (or B, C, etc.) (*CTD profile plots on the CTD plot page*) |
 
-NOTE: One of the CTD sensors MUST include a depth parameter and have a processing symbol of “depth”.  This is usually the SBE9.
+>[!IMPORTANT]
+>One of the CTD sensors MUST include a depth parameter and have a processing symbol of “depth”.  This is usually the SBE9.
 
 
 ## CTD Package Configuration
