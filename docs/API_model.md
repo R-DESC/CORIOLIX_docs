@@ -1,9 +1,11 @@
 # CORIOLIX Data Model
 
-This guide explains how data is organized in CORIOLIX, helping you understand the relationships between vessels, sensors, parameters, and data observations.
+This guide explains how data is organized in CORIOLIX, helping users understand the relationships between vessels, sensors, parameters, and data observations.
 
-!!! info "For API Users"
-    Understanding the data model will help you construct efficient API queries and interpret responses correctly.
+>[!NOTE]
+>For API Users
+>
+>Understanding the data model will help users construct efficient API queries and interpret responses correctly.
 
 ## Overview
 
