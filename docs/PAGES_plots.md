@@ -5,8 +5,17 @@ The sensor plots pages display specific groupings of real-time displays. The opt
 
 ## Manipulating The Plots
 Mousing over a plot will give you an information box that shows the timestamp, the parameter, and the measurement where the cursor is. 
-Scrolling down on a plot will zoom out centered on where the cursor is. Scrolling up on a plot will zoom in centered on where the cursor is. 
-The scroll bars on the axes also move the plots. The timestamps on either end of the X axis give the temporal range of the plot while the numbers on the Y axis give the range of the measurements of a given parameter. Clicking and dragging inside the box will zoom in to the selected section. Clicking and dragging the top of the bar will move the plot while keeping the length of time or measurement range the same. Users can also click and drag the sides of the bar to extend or shorten the ranges displayed on the plot.
+![Mouseover Plot](img/CX_Plot_MouseOver.png)
+
+Scrolling down on a plot will zoom out centered on where the cursor is. Scrolling up on a plot will zoom in centered on where the cursor is. The scroll bars on the axes also move the plots. The timestamps on either end of the X axis give the temporal range of the plot while the numbers on the Y axis give the range of the measurements of a given parameter. 
+![](img/CX_Plot_XAxis.png)
+
+Clicking and dragging the top of the bar will move the plot while keeping the length of time or measurement range the same. 
+![](img/CX_Plot_MoveZoom.png)
+
+Clicking and dragging inside the box will zoom in to the selected section. Users can also click and drag the sides of the bar to extend or shorten the ranges displayed on the plot.
+![](img/CX_Plot_CDZoom.png) 
+![](img/CX_Plot_AfterCDZoom.png) 
 
 There are icons to the right of each plot that change how it is displayed. Hover the cursor over the icons to learn what they do. They are also explained below. 
 
