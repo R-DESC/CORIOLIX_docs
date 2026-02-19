@@ -7,7 +7,7 @@ This guide provides a comprehensive overview of onboarding a new instrument to C
 > * The new sensor has been physically deployed on the vessel
 > * The sensor is operational and properly configured
 > * The sensor is configured to output RS-232 serial data
-> * You have appropriate access privileges in CORIOLIX
+> * Users have appropriate access privileges in CORIOLIX
 
 ## Overview
 
@@ -78,7 +78,7 @@ Establish the central data logger for processing and storing sensor data.
 >[!TIP]
 >Best Practices
 >- Complete all metadata fields for better data management
->- Test your regex parsing expressions thoroughly
+>- Test regex parsing expressions thoroughly
 >- Document any custom processing requirements
 >- Verify data flow at each step before proceeding
 
@@ -103,7 +103,7 @@ If a sensor already exists in one CORIOLIX installation, there is a quick way to
 
 ## Getting Help
 
-If you encounter issues during the onboarding process:
+If there are issues during the onboarding process:
 
 - Check the [troubleshooting section](HT_sensor_onboard_troubleshooting.md) for common problems
 - Review the [RegEx Guide](RegExGuide.md) for help with message parsing
