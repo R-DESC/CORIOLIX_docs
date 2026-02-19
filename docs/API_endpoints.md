@@ -2,12 +2,13 @@
 
 This page provides a curated guide to the most commonly used CORIOLIX API endpoints, organized by use case and workflow.
 
-!!! tip "Interactive API Browser"
-    For the complete, interactive API documentation with all parameters and the ability to test requests directly in your browser, visit your CORIOLIX instance's API browser at:
-    
-    **`https://your-vessel.coriolix.org/api/`**
-    
-    The DRF (Django REST Framework) browser provides a full reference with request/response examples.
+>[!TIP]
+>Interactive API Browser
+>
+>For the complete, interactive API documentation with all parameters and the ability to test requests directly in a browser, visit the CORIOLIX instance's API browser at:
+>**`https://example-vessel.coriolix.org/api/`**
+>
+>The DRF (Django REST Framework) browser provides a full reference with request/response examples.
 
 ## Quick Reference
 
@@ -35,7 +36,7 @@ Start here to explore what data is available in the system.
 GET /api/sensor/
 ```
 
-**Purpose:** Get all sensors installed on the vessel
+**Purpose:** Get data from all sensors installed on the vessel.
 
 **Common Parameters:**
 - `sensor_class` - Filter by category (Navigation, Atmospheric, Flowthrough, etc.)
@@ -132,7 +133,7 @@ GET /api/data/fullres/{sensor_id}/{parameter}/
 
 **Purpose:** Get raw, unaveraged sensor data
 
-**Use When:** You need maximum time resolution or want to see individual measurements
+**Use When:** Maximum time resolution is needed or to visualize individual measurements
 
 **Parameters:**
 - `date_after` - Start time
