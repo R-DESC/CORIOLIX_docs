@@ -23,9 +23,9 @@ When troubleshooting sensor onboarding issues:
 **Solutions:**
 1. Check existing sensors for duplicates:
    ```sql
-   SELECT sensor_id, sensor_name FROM sensors WHERE sensor_id = 'YOUR_ID';
+   SELECT sensor_id, sensor_name FROM sensors WHERE sensor_id = 'SENSOR_ID';
    ```
-2. Modify your sensor ID to be unique
+2. Modify the sensor ID to be unique
 3. Follow the naming convention: 6 alphanumeric + last 6 digits of serial
 
 ### Problem: Regex Parsing Failures
