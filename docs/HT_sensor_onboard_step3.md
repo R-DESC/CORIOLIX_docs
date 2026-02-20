@@ -1,13 +1,14 @@
 # Step 3: Network Logger Setup
 
-This step configures the OpenRVDAS sensor-to-network logger, which enables data transmission from your physical sensor to the CORIOLIX network infrastructure.
+This step configures the OpenRVDAS sensor-to-network logger, which enables data transmission from a physical sensor to the CORIOLIX network infrastructure.
 
-!!! info "Prerequisites"
-    - Sensor record created in CORIOLIX (Step 1)
-    - Parameters configured (Step 2)
-    - Physical sensor connected to OpenRVDAS peripheral system
-    - SSH access to the OpenRVDAS peripheral system
-    - Administrative privileges on the logging system
+>[!NOTE]
+>Prerequisites
+>- Sensor record created in CORIOLIX (Step 1)
+>- Parameters configured (Step 2)
+>- Physical sensor connected to OpenRVDAS peripheral system
+>- SSH access to the OpenRVDAS peripheral system
+>- Administrative privileges on the logging system
 
 ## Overview
 
@@ -22,13 +23,13 @@ The network logger (wire2net) component:
 
 ### 1. Access the Peripheral System
 
-SSH to the OpenRVDAS peripheral system where your RS-232 instrument is connected:
+SSH to the OpenRVDAS peripheral system where the RS-232 instrument is connected:
 
 ```bash
 ssh username@peripheral-system-ip
 ```
 
-Replace `username` and `peripheral-system-ip` with your actual credentials and system address.
+Replace `username` and `peripheral-system-ip` with actual credentials and system address.
 
 ### 2. Run the Configuration Script
 
@@ -36,13 +37,13 @@ Execute the cruise configuration script with the `wire2net` flag:
 
 ```bash
 cd /path/to/openrvdas/scripts
-./create_cruise_configuration --wire2net --sensor-id=YOUR_SENSOR_ID
+./create_cruise_configuration --wire2net --sensor-id=SENSOR_ID
 ```
 
 **Parameters:**
 - `--wire2net`: Enables sensor-to-network logging mode
 - `--sensor-id`: Use the sensor ID created in Step 1
-- Additional options may be available depending on your OpenRVDAS version
+- Additional options may be available depending on the OpenRVDAS version
 
 ### 3. Verify Configuration
 
@@ -52,7 +53,7 @@ Check that the configuration was created successfully:
 ls -la /path/to/openrvdas/configs/
 ```
 
-Look for your sensor configuration file, typically named: `[sensor_id]_wire2net.yaml`
+Look for the sensor configuration file, typically named: `[sensor_id]_wire2net.yaml`
 
 ### 4. Restart Logging Services
 
@@ -69,7 +70,7 @@ sudo service openrvdas-logger restart
 Check that data is flowing from sensor to network:
 
 ```bash
-# Check log files for your sensor
+# Check log files for the sensor
 tail -f /var/log/openrvdas/[sensor_id]_wire2net.log
 
 # Monitor network traffic (optional)
@@ -198,9 +199,7 @@ python -c "import yaml; print(yaml.safe_load(open('config.yaml')))"
 top
 iotop
 ```
-
-!!! success "Completion"
-    When the network logger is successfully configured and running, data from your sensor will be transmitted to the central CORIOLIX system. You can now proceed to [Step 4: Data Logger Setup](HT_sensor_onboard_step4.md).
+When the network logger is successfully configured and running, data from the sensor will be transmitted to the central CORIOLIX system. Proceed to [Step 4: Data Logger Setup](HT_sensor_onboard_step4.md).
 
 ## Navigation
 
