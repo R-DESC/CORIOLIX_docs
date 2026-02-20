@@ -1,13 +1,13 @@
 # Step 2: Configure Sensor Parameters
 
-After saving the new sensor record in Step 1, you can now configure the individual parameters that the sensor will collect. Parameters define the specific data variables, their units, processing requirements, and display characteristics.
+After saving the new sensor record in Step 1, users can now configure the individual parameters that the sensor will collect. Parameters define the specific data variables, their units, processing requirements, and display characteristics.
 
-!!! info "Prerequisite"
-    This step can only be completed after the sensor record has been created and saved in the CORIOLIX database from Step 1.
+>[!NOTE]
+>This step can only be completed after the sensor record has been created and saved in the CORIOLIX database from Step 1.
 
 ## Getting Started
 
-1. Navigate back to the sensor you just created
+1. Navigate back to the newly created sensor
 2. Open the sensor edit form
 3. Locate the **Parameters** section
 
@@ -19,7 +19,7 @@ After saving the new sensor record in Step 1, you can now configure the individu
 
 ![Parameter Overview Form](img/HT_Onboard_18.png)
 
-For each parameter that your sensor measures, complete the following fields:
+For each parameter the sensor measures, complete the following fields:
 
 | Field | Description | Notes |
 |-------|-------------|-------|
@@ -32,10 +32,11 @@ For each parameter that your sensor measures, complete the following fields:
 | **Diagnostic Parameter** | System flag | Indicates if parameter is for diagnostics |
 | **Internal ID** | System identifier | Auto-generated unique identifier by CORIOLIX |
 
-!!! tip "Processing Symbol"
-    - Leave blank for sensors using `NoTransformation`
-    - Consult the calibration/transformation module documentation for appropriate symbols
-    - This name must match exactly what the processing module expects
+>[!TIP]
+>Processing Symbol
+>- Leave blank for sensors using `NoTransformation`
+>- Consult the calibration/transformation module documentation for appropriate symbols
+>- This name must match exactly what the processing module expects
 
 ### Standard Name & Units
 
@@ -113,12 +114,13 @@ Display Color: Green
 
 ## Best Practices
 
-!!! tip "Parameter Configuration Tips"
-    - Use consistent naming conventions across all sensors
-    - Define reasonable data ranges for quality control
-    - Choose appropriate precision for your measurement accuracy
-    - Use standard oceanographic parameter names when available
-    - Document any special processing requirements
+>[!TIP]
+>Parameter Configuration Tips
+>- Use consistent naming conventions across all sensors
+>- Define reasonable data ranges for quality control
+>- Choose appropriate precision for your measurement accuracy
+>- Use standard oceanographic parameter names when available
+>- Document any special processing requirements
 
 ## Quality Control Considerations
 
@@ -137,8 +139,7 @@ After configuring each parameter:
 4. Click **"Save Parameter"** to commit the configuration
 5. Repeat for all additional parameters
 
-!!! success "Completion"
-    Once all parameters are configured and saved, you can proceed to [Step 3: Network Logger Setup](HT_sensor_onboard_step3.md).
+Once all parameters are configured and saved, proceed to [Step 3: Network Logger Setup](HT_sensor_onboard_step3.md).
 
 ## Navigation
 
