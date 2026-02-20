@@ -2,8 +2,10 @@
 
 Logging data to CORIOLIX first requires the creation of a sensor record in the CORIOLIX database. Because CORIOLIX manages all phases of the data lifecycle, it requires us to specify a diverse and comprehensive set of metadata up front.
 
-!!! tip "Best Practice"
-    While not all metadata fields are strictly required, best practice is to maintain all fields for optimal data management and system functionality.
+>[!TIP]
+>Best Practice
+>
+>While not all metadata fields are strictly required, best practice is to maintain all fields for optimal data management and system functionality.
 
 ## Getting Started
 
@@ -52,7 +54,7 @@ Configure how the sensor communicates with CORIOLIX:
 Define the data format and parsing requirements:
 
 - **Native Data Description** - Free text description of the data format
-- **Native Data Type** - For digital data: text or binary encoding?
+- **Native Data Type** - For digital data: text or binary encoding
 
 #### Sample Data Messages
 
@@ -71,7 +73,7 @@ B, -000.08, +000.03, +000.01, M, +344.17, +020.92, 00, 3A
 
 Create a regular expression to parse messages into named variables.
 
-!!! example "Building a Regex Parser"
+**Example:** Building a Regex Parser
     Using our anemometer example, we want to parse these values:
     
     - unit_id = B
@@ -96,8 +98,10 @@ Create a regular expression to parse messages into named variables.
 ['^(?P<unit_id>\w+),\s*(?P<U_speed>[+-]?\d+\.\d+),\s*(?P<V_speed>[+-]?\d+\.\d+),\s*(?P<W_speed>[+-]?\d+\.\d+),\s*M,\s*(?P<SOS>[+-]?\d+\.\d+),\s*(?P<Sonic_temp>[+-]?\d+\.\d+),\s*(?P<Status>\d+),\s*(?P<checksum>\w+)']
 ```
 
-!!! warning "Testing Required"
-    Always use the **"Verify Format"** button to test your parser with sample data before proceeding.
+>[!WARNING]
+>Testing Required
+>
+>Always use the **"Verify Format"** button to test the parser with sample data before proceeding.
 
 ### Data Processing Script
 
@@ -152,8 +156,7 @@ Once all sections are complete:
 2. Click **"Submit"** to create the sensor record
 3. Note the assigned sensor ID for future reference
 
-!!! success "Completion"
-    After successful submission, the sensor record is created in the CORIOLIX database. You can now proceed to [Step 2: Configure Parameters](HT_sensor_onboard_step2.md).
+After successful submission, the sensor record is created in the CORIOLIX database. Proceed to [Step 2: Configure Parameters](HT_sensor_onboard_step2.md).
 
 ## Navigation
 
