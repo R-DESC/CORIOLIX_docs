@@ -1,13 +1,14 @@
 # Step 4: Data Logger Setup
 
-This final step establishes the central data logger that receives network data from Step 3, processes it according to your sensor configuration, and stores it in the CORIOLIX database.
+This final step establishes the central data logger that receives network data from Step 3, processes it according to the sensor configuration, and stores it in the CORIOLIX database.
 
-!!! info "Prerequisites"
-    - Sensor record created (Step 1)
-    - Parameters configured (Step 2)
-    - Network logger running (Step 3)
-    - SSH access to central OpenRVDAS system
-    - Administrative privileges on the central system
+>[!NOTE]
+>Prerequisites
+>- Sensor record created (Step 1)
+>- Parameters configured (Step 2)
+>- Network logger running (Step 3)
+>- SSH access to central OpenRVDAS system
+>- Administrative privileges on the central system
 
 ## Overview
 
@@ -29,7 +30,7 @@ SSH to the central OpenRVDAS system that manages the CORIOLIX database:
 ssh username@central-system-ip
 ```
 
-Replace `username` and `central-system-ip` with your actual credentials and system address.
+Replace `username` and `central-system-ip` with actual credentials and system address.
 
 ### 2. Run the Configuration Script
 
@@ -37,7 +38,7 @@ Execute the cruise configuration script with the `net2db` flag:
 
 ```bash
 cd /path/to/openrvdas/scripts
-./create_cruise_configuration --net2db --sensor-id=YOUR_SENSOR_ID
+./create_cruise_configuration --net2db --sensor-id='SENSOR_ID'"
 ```
 
 **Parameters:**
@@ -53,7 +54,7 @@ Check that the data logger configuration was created:
 ls -la /path/to/openrvdas/configs/
 ```
 
-Look for your configuration file: `[sensor_id]_net2db.yaml`
+Look for the configuration file: `[sensor_id]_net2db.yaml`
 
 ### 4. Restart Central Logging
 
@@ -74,7 +75,7 @@ Confirm that data is flowing through the complete pipeline:
 tail -f /var/log/openrvdas/[sensor_id]_net2db.log
 
 # Verify database writes
-mysql -u coriolix -p -e "SELECT COUNT(*) FROM sensor_data WHERE sensor_id='YOUR_SENSOR_ID'"
+mysql -u coriolix -p -e "SELECT COUNT(*) FROM sensor_data WHERE sensor_id='SENSOR_ID'"
 ```
 
 ## Configuration Details
@@ -188,7 +189,7 @@ mysql -u coriolix -p coriolix_db
 
 # Check recent data
 SELECT * FROM sensor_data 
-WHERE sensor_id = 'YOUR_SENSOR_ID' 
+WHERE sensor_id = 'SENSOR_ID' 
 ORDER BY timestamp DESC 
 LIMIT 10;
 
@@ -196,7 +197,7 @@ LIMIT 10;
 SELECT COUNT(*) as records, 
        DATE(timestamp) as date
 FROM sensor_data 
-WHERE sensor_id = 'YOUR_SENSOR_ID' 
+WHERE sensor_id = 'SENSOR_ID' 
 GROUP BY DATE(timestamp);
 ```
 
@@ -207,7 +208,7 @@ GROUP BY DATE(timestamp);
 tail -f /var/log/openrvdas/[sensor_id]_net2db.log
 
 # Watch database activity
-watch -n 5 "mysql -u coriolix -p[password] -e 'SELECT COUNT(*) FROM coriolix_db.sensor_data WHERE sensor_id=\"YOUR_SENSOR_ID\"'"
+watch -n 5 "mysql -u coriolix -p[password] -e 'SELECT COUNT(*) FROM coriolix_db.sensor_data WHERE sensor_id=\"SENSOR_ID\"'"
 
 # Check for errors
 grep -i error /var/log/openrvdas/[sensor_id]_net2db.log
@@ -227,7 +228,7 @@ grep -i error /var/log/openrvdas/[sensor_id]_net2db.log
 
 1. Log into the CORIOLIX web interface
 2. Navigate to the **Sensors** page
-3. Find your newly configured sensor
+3. Find the newly configured sensor
 4. Verify that:
    - Sensor status shows "Active"
    - Real-time data is updating
@@ -243,13 +244,13 @@ SELECT
   COUNT(*) as records,
   COUNT(*) / (24 * 60 * 60) as records_per_second
 FROM sensor_data 
-WHERE sensor_id = 'YOUR_SENSOR_ID'
+WHERE sensor_id = 'SENSOR_ID'
 GROUP BY DATE(timestamp);
 
 -- Check for out-of-range values
 SELECT parameter_name, MIN(value), MAX(value), AVG(value)
 FROM sensor_data 
-WHERE sensor_id = 'YOUR_SENSOR_ID'
+WHERE sensor_id = 'SENSOR_ID'
   AND timestamp > NOW() - INTERVAL 1 DAY
 GROUP BY parameter_name;
 ```
@@ -293,8 +294,7 @@ GROUP BY parameter_name;
 3. **Validate regex parsing patterns**
 4. **Verify sensor calibration**
 
-!!! success "Completion"
-    Congratulations! Your sensor is now fully integrated into CORIOLIX. Data should be flowing from the physical sensor through the network logger to the central database and appearing in the web interface.
+Congratulations! The new sensor is now fully integrated into CORIOLIX. Data should be flowing from the physical sensor through the network logger to the central database and appearing in the web interface.
 
 ## Post-Setup Tasks
 
