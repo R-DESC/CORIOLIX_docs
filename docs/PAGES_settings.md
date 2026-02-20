@@ -27,14 +27,14 @@ Flowthrough systems use automated valves to switch between different fluid sourc
 
 - Which sensor/valve equipment is being controlled
 - Open and closed durations (how long the valve stays in each position)
-- What material/content is being sampled during each state (e.g., ambient seawater, filtered water, calibration fluid)
+- What material is being sampled during each state (e.g., ambient seawater, filtered water, calibration fluid)
 - Transition time required for the valve to switch positions
 
 ### Accessing Flowthrough Configuration
 
 1. From the main navigation menu, click **Settings** → **Flowthrough Configuration**
 2. The page displays a table of all configured valves
-3. If you have edit permissions, buttons appear to manage configurations
+3. Depending on user permissions, Edit buttons may appear to manage configurations
 
 ### Viewing Valve Configurations
 
@@ -85,7 +85,7 @@ The table displays all active valve configurations with the following columns:
 
 ## Data Management
 
-The Data Management page (shown as "Data Management" in the Settings menu) controls CORIOLIX data logging behavior, real-time transmission, and data retention policies.
+The Data Management page in the Settings menu controls CORIOLIX data logging behavior, real-time transmission, and data retention policies.
 
 ### Overview
 
@@ -100,7 +100,7 @@ Data Management settings apply to CORIOLIX instances on both the ship and shore 
 
 1. From the main navigation menu, click **Settings** → **Data Management**
 2. The page shows current settings in a read-only view
-3. Click the **Edit** button (admin only) to modify settings
+3. Contact an Admin user if any settings need to be chamged. 
 
 ### General Settings
 
