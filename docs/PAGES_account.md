@@ -51,7 +51,7 @@ From the site navigation options select: *My Account > My Alerts*
 * Value Alerts - Value alerts work by evaluating sensor parameter value against a threshold condition. The Alert Configuration page has an example of a use case for Value Alerts. Users may combine up to two sensors or sensor parameters per value alert.
 * Proximity Alerts - Proximity alerts evaluate the location of the vessel against geographic points of interest (stations, ports, etc.).
 * Temporal Alerts - Temporal alerts evaluate the time now against a datetime parameter for a sensor (e.g. calibration date, warranty expiration date, schedule maintenance data, etc.) to monitor.  Users may set an additional parameter, offset, to receive advance notice of a pending event.
-* Sensor Alerts - These alerts serve as status updates for sensors. Users can configure them to alert when a sensor hasn't collected data in a given timeframe. 
+* Sensor Alerts - These alerts serve as status updates for sensors. They are generated automatically when a new sensor is added and CORIOLIX is refreshed. 
 
 Place a check next to any alerts (in the alert table) that you would like to receive.  Existing alerts may be edited using the "Edit" button.  New alerts may be created by using one of the "Create New" buttons.
 
