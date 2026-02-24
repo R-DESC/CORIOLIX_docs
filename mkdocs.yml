@@ -81,7 +81,6 @@ nav:
           - Document Library: PAGES_documents.md
           - Sensor Management: PAGES_sensors.md
           - Settings: PAGES_settings.md
-          - Account Management: PAGES_account.md
           - Cruise Tools: PAGES_tools.md
 
       - Troubleshooting & FAQs: HT_faq_sci.md # need to create this page
