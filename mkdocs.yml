@@ -72,17 +72,21 @@ nav:
 
       - Using CORIOLIX:
           - Dashboard Overview: PAGES_status.md
+          - Cruise Tools: PAGES_tools.md
+          - Cruise Charts: PAGES_charts.md
+
           - Live Data Streams: PAGES_data.md
-          - Charts & Visualization: PAGES_charts.md
           - Sensor Plots: PAGES_plots.md
           - Data Services:
               - Data Products & Structure: HT_data_access.md
               - Export Data: export_data.md
-          - Document Library: PAGES_documents.md
           - Sensor Management: PAGES_sensors.md
+
+          - Document Library: PAGES_documents.md
+          - Vessel Page: PAGES_vessel.md # need to create this page
           - Settings: PAGES_settings.md
           - Account Management: PAGES_account.md
-          - Cruise Tools: PAGES_tools.md
+          - About: PAGES_about.md
 
       - Troubleshooting & FAQs: HT_faq_sci.md # need to create this page
 
