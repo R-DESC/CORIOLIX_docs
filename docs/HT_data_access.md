@@ -6,8 +6,7 @@ CORIOLIX provides access to raw, high-resolution, and binned data products via m
 ### Native Unmodified Sensor Messages
 The unmodified data messages output from the sensor are provided at the native resolution in daily text files. The time of collection and sensor ID is prepended to each data message. No quality control has been performed.
 
-Example native unmodified data from a Seapath 380 sampled from a daily logfile.
-```txt
+```txt title="Example native unmodified data from a Seapath 380 sampled from a daily logfile."
 2026-03-23T23:45:10.261108Z seapth000000 $GPHDT,346.98,T*05
 2026-03-23T23:45:10.265173Z seapth000000 $GPGGA,200053.36,5711.764042,N,14657.806146,W,2,12,1.0,0.37,M,7.11,M,1.4,0001*6A
 2026-03-23T23:45:10.275551Z seapth000000 $GPVTG,13.34,T,357.26,M,0.4,N,0.8,K,D*1A
@@ -19,7 +18,7 @@ Example native unmodified data from a Seapath 380 sampled from a daily logfile.
 ### Native Resolution Parameter Vales
 These data are parsed from the sensor data messages and provided as individual parameters at the native resolution (e.g. 1 Hz). Processed data are also sometimes available. Timestamps and data frequencies vary between sensors. Preliminary quality flags are included. 
 
-```txt
+```txt title="Example of native resolution parameter data from the same Seapath 380.""
 time_raw,time,value,flag_summary,flag_string
 UTC,UTC,degrees_true,unitless,unitless
 2026-03-23T00:00:00Z,2026-03-23T00:00:00Z,205.39,1,212122222222222222222222222222
