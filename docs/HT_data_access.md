@@ -2,16 +2,18 @@
 
 CORIOLIX provides access to raw, high-resolution, and binned data products via multiple modes including data download, API, and data services. Please review the details related to data structure options and access methods described here to identify the best match for different needs.
 
-## Temporal Structure Details
+## Data States
+### Native Unmodified Sensor Messages
+The unmodified data messages output from the sensor are provided at the native resolution in daily text files. The time of collection and sensor ID is prepended to each data message. No quality control has been performed. 
 
-### Native Unmodified Data
-All sensor data received by CORIOLIX are archived as ASCII flat files, one file per sensor per day. The unmodified raw message strings are stored at the native resolution collected by the sensor. The format of the strings varies by sensor. Each message string is prepended with the UTC timestamp upon receipt. No quality control has been performed on these data.
+### Native Resolution Parameter Vales
+These data are parsed from the sensor data messages and provided as individual parameters at the native resolution (e.g. 1 Hz). Processed data are also sometimes available. Timestamps and data frequencies vary between sensors. Preliminary quality flags are included. 
 
-### High Resolution Data
-For real-time applications, a subset of sensor data are extracted and stored within CORIOLIX. These searchable datasets are available at 1 Hz resolution or below. The collection timestamps and data values are unmodified. Preliminary quality control flags are provided as an additional field. 
+### Binned Data with Statistics
+These data from individual parameters are provided in temporal (e.g. one-minute) bins. The mean and accompanying statistics are provided. Preliminary quality flags are included. 
 
-### Binned Data
-These data are provided in temporal (e.g. one-minute) bins. The mean and accompanying statistics are provided. Preliminary quality flags are included. 
+### Binned Data without Statistics
+This dataset includes data from all sensors and all parameters. The data are provided in temporal (e.g. one-minute) bins. Only the mean is provided (no statistics, no quality flags). 
 
 #### Binning Method
 
