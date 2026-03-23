@@ -6,7 +6,10 @@ At present, most of the CORIOLIX web user interface is available for unauthentic
 ## Restricted Content
 Restricted content under each CORIOLIX navigation heading include:
 
-* **Cruise Charts** - *logged in users may save custom user draws routes*
+* **Cruise Tools**
+  - **Add New Cruise** - *create a new cruise (if you don't use MFP).
+  - **Cruise Event Log** - *view and edit the cruise log.
+* **Maps** - *draw and save planning routes routes*
 * **Sensor Plots**  - *there are no restricted items under this heading*
 * **Status** - *there are no restricted items under this heading*
 * **Sensors**
