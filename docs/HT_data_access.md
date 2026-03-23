@@ -6,8 +6,13 @@ CORIOLIX provides access to raw, high-resolution, and binned data products via m
 ### Native Unmodified Sensor Messages
 The unmodified data messages output from the sensor are provided at the native resolution in daily text files. The time of collection and sensor ID is prepended to each data message. No quality control has been performed.
 
-```py
-import tensorflow as tf
+```txt
+2026-03-23T23:45:10.261108Z seapth000000 $GPHDT,346.98,T*05
+2026-03-23T23:45:10.265173Z seapth000000 $GPGGA,200053.36,5711.764042,N,14657.806146,W,2,12,1.0,0.37,M,7.11,M,1.4,0001*6A
+2026-03-23T23:45:10.275551Z seapth000000 $GPVTG,13.34,T,357.26,M,0.4,N,0.8,K,D*1A
+2026-03-23T23:45:11.261309Z seapth000000 $GPHDT,346.90,T*0D
+2026-03-23T23:45:11.273443Z seapth000000 $GPGGA,200054.36,5711.764050,N,14657.806196,W,2,12,1.0,0.42,M,7.11,M,1.2,0001*67
+2026-03-23T23:45:11.284831Z seapth000000 $GPVTG,27.61,T,11.52,M,0.2,N,0.4,K,D*25
 ```
 
 ### Native Resolution Parameter Vales
