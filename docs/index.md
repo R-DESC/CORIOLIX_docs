@@ -1,7 +1,5 @@
 # CORIOLIX Documentation
 
-**Version 1.3.0** • *Updated November 2025*
-
 ## Overview
 
 CORIOLIX (**C**ruise **O**bservation **R**eal-Time **I**nterface for **L**ive **I**nformation **E**xchange) is a comprehensive real-time oceanographic data acquisition and processing system developed for research vessels.
