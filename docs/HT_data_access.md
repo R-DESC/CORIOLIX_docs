@@ -4,7 +4,11 @@ CORIOLIX provides access to raw, high-resolution, and binned data products via m
 
 ## Data States
 ### Native Unmodified Sensor Messages
-The unmodified data messages output from the sensor are provided at the native resolution in daily text files. The time of collection and sensor ID is prepended to each data message. No quality control has been performed. 
+The unmodified data messages output from the sensor are provided at the native resolution in daily text files. The time of collection and sensor ID is prepended to each data message. No quality control has been performed.
+
+```py
+import tensorflow as tf
+```
 
 ### Native Resolution Parameter Vales
 These data are parsed from the sensor data messages and provided as individual parameters at the native resolution (e.g. 1 Hz). Processed data are also sometimes available. Timestamps and data frequencies vary between sensors. Preliminary quality flags are included. 
