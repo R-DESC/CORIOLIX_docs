@@ -18,8 +18,6 @@ CORIOLIX (**C**ruise **O**bservation **R**eal-Time **I**nterface for **L**ive **
     **NOAA Vessels:**
     
     - Okeanos Explorer
-    - Gordon Gunter
-    - Bell M. Shimada
 
 ## Background
 
