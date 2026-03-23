@@ -33,4 +33,4 @@ Quick orientation for Marine Technicians and IT staff: where to find installatio
 
 ## Related (user-facing) pages
 
-- Account and user details: [PAGES_account.md](docs/PAGES_account.md) — use this for non-admin account tasks and read-only user workflows.
+- Account and user details: [PAGES_settings.md](PAGES_settings.md) — use this for non-admin account tasks and read-only user workflows.
