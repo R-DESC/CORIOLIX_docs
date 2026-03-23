@@ -1,10 +1,11 @@
 # Accessing the CORIOLIX user interface(s):
 
-Please note that currently, Fall 2025, there are three  public facing CORIOLIX shoreside websites:
+Please note that currently, Spring 2026, there are four public facing CORIOLIX shoreside websites:
 
 * RV Sikuliaq
 * RV Point Sur
 * RV Savannah
+* RV Roger Revelle
 
 Please also note that the shipboard interface to CORIOLIX (website) is only available locally on the shipboard LAN (by design it can't be accessed by users from shore). 
 
@@ -24,3 +25,5 @@ In contrast, the shoreside CORIOLIX user interface may be accessed from ship or 
 
 - Shoreside: [https://coriolix.savannah.skio.uga.edu/](https://coriolix.savannah.skio.uga.edu/)
 - Shipboard: [https://](https://)
+
+## CORIOLIX on Revelle:
