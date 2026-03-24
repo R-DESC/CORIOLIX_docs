@@ -28,7 +28,7 @@ CORIOLIX was developed during the construction of the Regional Class Research Ve
 ### :stopwatch: Real-Time Data Access
 Stream oceanographic data from ship to shore with minimal latency, enabling real-time decision making and adaptive sampling strategies.
 
-### 📊 Comprehensive Data Management
+### :open_book: Comprehensive Data Management
 - **Sensor Catalog**: Complete inventory of onboard instrumentation
 - **Data Acquisition Configuration**: Flexible setup for diverse sensor systems
 - **Data Processing**: Automated quality control and processing pipelines
@@ -37,7 +37,7 @@ Stream oceanographic data from ship to shore with minimal latency, enabling real
 ### 🌐 Web-Based Interface
 Access all system features through an intuitive web interface designed for both shipboard and shoreside users.
 
-### 🔌 API Integration
+### 🧰 API Integration
 Robust REST API for integration with external systems and custom applications.
 
 ## System Capabilities
