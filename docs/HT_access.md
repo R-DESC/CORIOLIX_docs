@@ -5,9 +5,14 @@ Please note that currently, Spring 2026, there are four public facing CORIOLIX s
 * RV Sikuliaq
 * RV Point Sur
 * RV Savannah
-* RV Roger Revelle
+* HMSC Climate Monitoring Station
 
-Please also note that the shipboard interface to CORIOLIX (website) is only available locally on the shipboard LAN (by design it can't be accessed by users from shore). 
+In addition to the public sites above, a few users restrict access to their shoreside sites:
+
+* RV Roger Revelle
+* RV Okeanos Explorer
+
+Please also note that all shipboard interfaces to CORIOLIX (website) are only available locally on the shipboard LAN (by design it can't be accessed by users from shore). 
 
 In contrast, the shoreside CORIOLIX user interface may be accessed from ship or from shore. When on ship, use the ship's interface for best performance.
 
@@ -26,4 +31,6 @@ In contrast, the shoreside CORIOLIX user interface may be accessed from ship or 
 - Shoreside: [https://coriolix.savannah.skio.uga.edu/](https://coriolix.savannah.skio.uga.edu/)
 - Shipboard: [https://](https://)
 
-## CORIOLIX on Revelle:
+## CORIOLIX at Hatfield Marine Science Center:
+
+- Shoreside: [https://hmsc-cms.dri.oregonstate.edu/](https://hmsc-cms.dri.oregonstate.edu/)
