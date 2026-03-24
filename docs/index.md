@@ -25,10 +25,10 @@ CORIOLIX was developed during the construction of the Regional Class Research Ve
 
 ## Key Features
 
-### :stopwatch: Real-Time Data Access
+### ⏱️ Real-Time Data Access
 Stream oceanographic data from ship to shore with minimal latency, enabling real-time decision making and adaptive sampling strategies.
 
-### :open_book: Comprehensive Data Management
+### 📖 Comprehensive Data Management
 - **Sensor Catalog**: Complete inventory of onboard instrumentation
 - **Data Acquisition Configuration**: Flexible setup for diverse sensor systems
 - **Data Processing**: Automated quality control and processing pipelines
