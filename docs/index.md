@@ -63,9 +63,9 @@ CORIOLIX provides the following core services:
 3. **[Data Access](HT_data_access.md)** - Access underway data streams
 4. **[Sensor Onboarding](HT_sensor_onboard.md)** - Add new sensors to the system
 
-## Project Links
+## GitHub Repository Links
 
-- **Main Application**: [CORIOLIX_app](https://github.com/R-DESC/CORIOLIX_app)
+- **Main Application**: [CORIOLIX](https://github.com/R-DESC/coriolix)
 - **Installation Tools**: [CORIOLIX_install](https://github.com/R-DESC/CORIOLIX_install)
 - **Documentation**: [CORIOLIX_docs](https://github.com/R-DESC/CORIOLIX_docs)
 
