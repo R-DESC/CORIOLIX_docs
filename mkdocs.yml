@@ -73,7 +73,7 @@ nav:
       - Using CORIOLIX:
           - Dashboard Overview: PAGES_status.md
           - Cruise Tools: PAGES_tools.md
-          - Cruise Charts: PAGES_charts.md
+          - Map: PAGES_map.md
 
           - Live Data Streams: PAGES_data.md
           - Sensor Plots: PAGES_plots.md
