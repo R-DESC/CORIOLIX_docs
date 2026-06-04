@@ -45,7 +45,17 @@ Define and configure individual sensor parameters for data processing and displa
 - Configure database storage options
 - Set up display preferences
 
-### [Step 3: Network Logger Setup](HT_sensor_onboard_step3.md)
+### [Step 3: Upload Calibration Files](HT_sensor_onboard_step3.md)
+
+Upload the sensor calibration files.
+
+**Key Activities:**
+
+- Create a parseable calibration file if needed
+- Complete the document upload form
+- Confirm the calibration coefficients were successfully uploaded
+
+### [Step 4: Network Logger Setup](HT_sensor_onboard_step4.md)
 
 Create and configure the OpenRVDAS sensor-to-network logger for data transmission.
 
@@ -55,7 +65,7 @@ Create and configure the OpenRVDAS sensor-to-network logger for data transmissio
 - Configure cruise configuration with wire2net settings
 - Restart logging services
 
-### [Step 4: Data Logger Setup](HT_sensor_onboard_step4.md)
+### [Step 5: Data Logger Setup](HT_sensor_onboard_step5.md)
 
 Establish the central data logger for processing and storing sensor data.
 
@@ -72,8 +82,9 @@ Establish the central data logger for processing and storing sensor data.
 |------|-------------|----------------|
 | [Step 1](HT_sensor_onboard_step1.md) | Create Sensor Record | 15-30 minutes |
 | [Step 2](HT_sensor_onboard_step2.md) | Configure Parameters | 10-20 minutes |
-| [Step 3](HT_sensor_onboard_step3.md) | Network Logger | 5-10 minutes |
-| [Step 4](HT_sensor_onboard_step4.md) | Data Logger | 5-10 minutes |
+| [Step 3](HT_sensor_onboard_step3.md) | Calibration Files | 5-20 minutes |
+| [Step 4](HT_sensor_onboard_step4.md) | Network Logger | 5-10 minutes |
+| [Step 5](HT_sensor_onboard_step5.md) | Data Logger | 5-10 minutes |
 
 >[!TIP]
 >Best Practices
@@ -99,7 +110,7 @@ Learn how to build regular expressions for parsing sensor messages. This compreh
 >Understanding regex patterns is crucial for completing the Message Format String in Step 1. Review this guide before attempting to parse complex sensor messages.
 
 ### Importing and Exporting Sensors
-If a sensor already exists in one CORIOLIX installation, there is a quick way to add it to another. Navigate to the Sensor List page that has the desired sensor. Logging in is not necessary. From the dropdown menu, select "Export Sensor". It will download a copy of the sensor's metadata as a .csv. To add it to a different ship/istallation, log in and navigate to the Sensor List page. Click "Import" at the top of the page and upload the .csv file. Check that all the metadata filled in properly and be sure to assign it to the correct ship. 
+If a sensor already exists in one CORIOLIX installation, there is a quick way to add it to another. Navigate to the Sensor List page that has the desired sensor. Logging in is not necessary. From the dropdown menu, select "Export Sensor". It will download a copy of the sensor's metadata as a .csv. To add it to a different ship/istallation, log in and navigate to the Sensor List page. Click "Import" at the top of the page and upload the .csv file. Check that all the metadata filled in properly and be sure to assign it to the correct ship.
 
 ## Getting Help
 
