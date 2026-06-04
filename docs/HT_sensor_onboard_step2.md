@@ -139,12 +139,12 @@ After configuring each parameter:
 4. Click **"Save Parameter"** to commit the configuration
 5. Repeat for all additional parameters
 
-Once all parameters are configured and saved, proceed to [Step 3: Network Logger Setup](HT_sensor_onboard_step3.md).
+Once all parameters are configured and saved, proceed to [Step 3: Upload Calibration Files](HT_sensor_onboard_step3.md).
 
 ## Navigation
 
 - **Previous:** [Step 1: Create New Sensor](HT_sensor_onboard_step1.md)
-- **Next:** [Step 3: Network Logger Setup](HT_sensor_onboard_step3.md)
+- **Next:** [Step 3: Upload Calibration Files](HT_sensor_onboard_step3.md)
 - **Overview:** [Sensor Onboarding Guide](HT_sensor_onboard.md)
 
 ## Troubleshooting

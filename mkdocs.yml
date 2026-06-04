@@ -99,8 +99,9 @@ nav:
               - Overview: HT_sensor_onboard.md
               - Step 1 – Create Sensor: HT_sensor_onboard_step1.md
               - Step 2 – Configure Parameters: HT_sensor_onboard_step2.md
-              - Step 3 – Network Logger: HT_sensor_onboard_step3.md
-              - Step 4 – Data Logger: HT_sensor_onboard_step4.md
+              - Step 3 – Upload Calibration Files: HT_sensor_onboard_step3.md
+              - Step 4 – Network Logger: HT_sensor_onboard_step4.md
+              - Step 5 – Data Logger: HT_sensor_onboard_step5.md
               - CTD Configuration: HT_CTD_Configuration.md
               - Troubleshooting: HT_sensor_onboard_troubleshooting.md
               - Special Topics:

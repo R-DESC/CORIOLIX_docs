@@ -20,16 +20,17 @@ Quick orientation for Marine Technicians and IT staff: where to find installatio
 
 ## Direct links (Administration subpages)
 
-- Installation Guide: [INSTALL_coriolix.md](docs/INSTALL_coriolix.md)
-- Upgrading: [UPGRADE_coriolix.md](docs/UPGRADE_coriolix.md)
-- Log Management: [LOGS_coriolix.md](docs/LOGS_coriolix.md)
-- Sensor Integration Overview: [HT_sensor_onboard.md](docs/HT_sensor_onboard.md)
-  - Step 1 — Create Sensor: [HT_sensor_onboard_step1.md](docs/HT_sensor_onboard_step1.md)
-  - Step 2 — Configure Parameters: [HT_sensor_onboard_step2.md](docs/HT_sensor_onboard_step2.md)
-  - Step 3 — Network Logger: [HT_sensor_onboard_step3.md](docs/HT_sensor_onboard_step3.md)
-  - Step 4 — Data Logger: [HT_sensor_onboard_step4.md](docs/HT_sensor_onboard_step4.md)
-  - Troubleshooting: [HT_sensor_onboard_troubleshooting.md](docs/HT_sensor_onboard_troubleshooting.md)
-  - Special topics: [RegExGuide.md](docs/RegExGuide.md)
+- Installation Guide: [INSTALL_coriolix.md](INSTALL_coriolix.md)
+- Upgrading: [UPGRADE_coriolix.md](UPGRADE_coriolix.md)
+- Log Management: [LOGS_coriolix.md](LOGS_coriolix.md)
+- Sensor Integration Overview: [HT_sensor_onboard.md](HT_sensor_onboard.md)
+  - Step 1 — Create Sensor: [HT_sensor_onboard_step1.md](HT_sensor_onboard_step1.md)
+  - Step 2 — Configure Parameters: [HT_sensor_onboard_step2.md](HT_sensor_onboard_step2.md)
+  - Step 3 — Upload Calibration Files: [HT_sensor_onboard_step3.md](HT_sensor_onboard_step3.md)
+  - Step 4 — Network Logger: [HT_sensor_onboard_step4.md](HT_sensor_onboard_step4.md)
+  - Step 5 — Data Logger: [HT_sensor_onboard_step5.md](HT_sensor_onboard_step5.md)
+  - Troubleshooting: [HT_sensor_onboard_troubleshooting.md](HT_sensor_onboard_troubleshooting.md)
+  - Special topics: [RegExGuide.md](RegExGuide.md)
 
 ## Related (user-facing) pages
 

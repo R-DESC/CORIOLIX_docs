@@ -31,12 +31,17 @@ CORIOLIX was developed during the construction of the Regional Class Research Ve
    cd CORIOLIX_docs
    ```
 
-2. Install dependencies:
+2. Create a virtual python environment:
+   sudo apt install python3-venv
+   python3 -m venv .venv
+   source .venv/bin/activate
+
+3. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Serve the documentation locally:
+4. Serve the documentation locally:
    ```bash
    mkdocs serve
    ```
@@ -48,7 +53,7 @@ CORIOLIX was developed during the construction of the Regional Class Research Ve
 To build the static site:
 
 ```bash
-mkdocs build
+mkdocs build -d /var/www/html/docs
 ```
 
 ## Contributing

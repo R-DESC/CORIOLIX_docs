@@ -75,7 +75,7 @@ Create a regular expression to parse messages into named variables.
 
 **Example:** Building a Regex Parser
     Using our anemometer example, we want to parse these values:
-    
+
     - unit_id = B
     - U_speed = -000.08
     - V_speed = +000.03
@@ -145,6 +145,8 @@ Complete equipment operating limit information for QA/QC purposes:
 
 #### Calibration and Maintenance
 ![Calibration and Maintenance](img/HT_Onboard_15.png)
+
+Note: Calibration files should be uploaded in  [Step 3: Calibration Files](HT_sensor_onboard_step3.md).
 
 ## Submit Configuration
 
